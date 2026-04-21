@@ -39,7 +39,7 @@ const tiktokUrl = import.meta.env.VITE_TIKTOK_URL?.trim() || '';
 export const siteContent = {
   brand: {
     name: 'Menudo',
-    tag: 'Finanzas personales con claridad',
+    tag: '',
     siteUrl,
     supportEmail,
     supportPhone,
@@ -63,145 +63,120 @@ export const siteContent = {
   ] satisfies NavItem[],
   hero: {
     eyebrow: 'Menudo App',
-    title: 'Tu dinero, más claro y menos pesado.',
+    title: 'La app de finanzas que da gusto usar.',
     body:
-      'Una web limpia para presentar Menudo, centralizar soporte y publicar tus políticas sin mezclar branding, legal y ayuda dentro del backend.',
-    chips: ['Presupuestos claros', 'Metas con contexto', 'Soporte serio'],
-    primaryCta: { label: 'Ir a soporte', href: '/support' as RouteKey },
+      'Dile hola a una nueva forma de ver tu dinero. Menudo trae claridad y paz mental a tus gastos diarios para que tú solo te preocupes de disfrutar.',
+    chips: ['Gratis para probar', 'Fácil de usar', 'Diseño moderno'],
+    primaryCta: { label: 'Descargar ahora', href: '/support' as RouteKey },
     secondaryCta: {
-      label: 'Leer privacidad',
+      label: 'Saber más',
       href: '/privacy-policy' as RouteKey,
     },
-    spotlightLabel: 'Mockup principal',
-    spotlightImage: '/placeholders/hero-device.svg',
+    spotlightLabel: 'Dashboard',
+    spotlightImage: '/placeholders/nuevobannerok.png',
   },
   featureCards: [
     {
-      eyebrow: 'Simple',
-      title: 'Una home ligera y moderna',
+      eyebrow: 'Ahorro',
+      title: 'Mira cómo crecen tus ahorros',
       body:
-        'Presenta Menudo sin ruido visual, con jerarquía limpia, llamadas claras y una dirección visual consistente con tu app.',
-      image: '/placeholders/feature-home.svg',
+        'Sigue tus metas y mira cómo se acumula tu dinero. Es como un juego, pero con resultados reales en tu cuenta.',
+      image: '/placeholders/Gemini_Generated_Image_xvlbkjxvlbkjxvlb.png',
       accent: 'cream',
     },
     {
-      eyebrow: 'Legal',
-      title: 'Privacidad y términos listos para publicar',
+      eyebrow: 'Simplicidad',
+      title: 'Arma tu presupuesto en segundos',
       body:
-        'Páginas separadas, fáciles de editar, con copy centralizado y preparadas para enlazarse desde App Store Connect y el paywall.',
-      image: '/placeholders/feature-legal.svg',
+        'Sin hojas de cálculo infinitas. Divide tus gastos por categorías y mantén el control sin esfuerzo.',
+      image: '/placeholders/Gemini_Generated_Image_i689bii689bii689.png',
       accent: 'emerald',
     },
     {
-      eyebrow: 'Soporte',
-      title: 'Un punto serio para ayuda real',
+      eyebrow: 'Tranquilidad',
+      title: 'Adiós a las suscripciones olvidadas',
       body:
-        'Soporte, privacidad de cuenta y datos de contacto en una misma arquitectura limpia, sin meter HTML improvisado dentro del backend.',
-      image: '/placeholders/feature-support.svg',
+        'Menudo te avisa de esos pagos automáticos que ya no usas. Cancela lo que no necesitas con un toque.',
+      image: '/placeholders/Gemini_Generated_Image_f7axcpf7axcpf7ax.png',
       accent: 'orange',
     },
   ] satisfies FeatureCard[],
   supportHighlights: [
-    'Correo de soporte visible',
-    'Espacio para dirección legal y teléfono',
-    'Enlaces listos para App Store Connect',
-    'Páginas preparadas para screenshots y logos reales',
+    'Ayuda real por personas reales',
+    'Guías rápidas para empezar',
+    'Privacidad total garantizada',
+    'Soporte listo para Apple Store',
   ],
   privacyPolicy: {
-    title: 'Política de privacidad',
+    title: 'Privacidad de Menudo',
     intro:
-      'Este texto está pensado como base editorial limpia. Sustituye los detalles legales finales de tu empresa, retención y terceros antes de publicar.',
+      'Nosotros también odiamos los textos legales largos. Aquí te explicamos de forma humana cómo cuidamos tu información.',
     sections: [
       {
-        title: '1. Qué datos usamos',
+        title: '1. Qué sabemos de ti',
         body:
-          'Menudo puede procesar información de cuenta, perfil, carteras, presupuestos, transacciones, categorías, alertas e información de suscripción para operar la experiencia principal de la app.',
+          'Solo lo necesario para que la app funcione: tu correo para la cuenta y los movimientos que tú decidas registrar o sincronizar. Nada más.',
       },
       {
-        title: '2. Para qué los usamos',
+        title: '2. Tu dinero es tuyo',
         body:
-          'Usamos esos datos para autenticarte, guardar tu progreso, mostrar tus finanzas, habilitar presupuestos compartidos y responder solicitudes de soporte.',
+          'No vendemos tus datos a nadie. Punto. Usamos tu información solo para mostrarte tus gráficos y ayudarte a ahorrar.',
       },
       {
-        title: '3. Conservación y control',
+        title: '3. Tú tienes el control',
         body:
-          'Puedes corregir datos desde la app y solicitar la eliminación de tu cuenta. Algunos registros pueden conservarse por el tiempo que exijan obligaciones legales, fiscales o de seguridad.',
-      },
-      {
-        title: '4. Contacto',
-        body:
-          'Si tienes preguntas sobre privacidad, escríbenos al correo de soporte publicado en esta web.',
+          'En cualquier momento puedes borrar tus datos o cerrar tu cuenta directamente desde los ajustes de la app. Tú decides.',
       },
     ] satisfies LegalSection[],
   },
   terms: {
-    title: 'Términos de servicio',
+    title: 'Términos de Uso',
     intro:
-      'Esta base resume el uso responsable de Menudo. Antes de publicar, complétala con tu entidad legal, jurisdicción y cualquier política particular de suscripciones o contenido.',
+      'Al usar Menudo, aceptamos ser buenos vecinos. Aquí están las reglas básicas para que todo funcione bien.',
     sections: [
       {
-        title: '1. Uso de la cuenta',
+        title: '1. Uso Responsable',
         body:
-          'Eres responsable de mantener seguro tu acceso y de revisar la información financiera que registras o compartes dentro de Menudo.',
+          'Menudo es una herramienta para ayudarte. La información que pones es tu responsabilidad y nosotros nos encargamos de que la app siempre esté lista para ti.',
       },
       {
-        title: '2. Suscripciones y cobros',
+        title: '2. Suscripciones',
         body:
-          'Los planes pagos y renovaciones se gestionan por Apple u otros proveedores de compra en la plataforma correspondiente. Cancelar una suscripción no borra automáticamente la cuenta.',
-      },
-      {
-        title: '3. Disponibilidad del servicio',
-        body:
-          'Podemos actualizar, mejorar o retirar funciones para mantener Menudo usable, segura y alineada con el producto.',
-      },
-      {
-        title: '4. Soporte',
-        body:
-          'Si necesitas ayuda, soporte o aclaraciones sobre el servicio, usa los datos visibles en la página de soporte.',
+          'Si eliges un plan Pro, Apple o Google gestionan el cobro de forma segura. Puedes cancelar cuando quieras sin preguntas.',
       },
     ] satisfies LegalSection[],
   },
   support: {
-    title: 'Centro de soporte',
+    title: 'Centro de Ayuda',
     intro:
-      'Este espacio sirve como Support URL real para App Store Connect y como punto público para ayuda, contacto y solicitudes generales.',
+      '¿Algo no funciona como esperabas? No te preocupes, estamos aquí para echarte una mano.',
     sections: [
       {
-        title: 'Ayuda con acceso',
+        title: 'Dudas con tu cuenta',
         body:
-          'Si no puedes entrar, primero prueba el flujo de recuperación dentro de Menudo. Si el enlace no llega o falla, escríbenos con el correo de tu cuenta.',
+          'Si tienes problemas para entrar o quieres cambiar algo de tu perfil, escríbenos y lo resolvemos en un momento.',
       },
       {
-        title: 'Bugs y mejoras',
+        title: 'Sugerencias',
         body:
-          'Incluye capturas, una descripción breve y el dispositivo donde pasó. Eso acelera mucho la respuesta.',
-      },
-      {
-        title: 'Suscripciones',
-        body:
-          'Si tienes un plan activo, revisa primero la gestión de suscripciones de Apple. Para dudas puntuales, contáctanos y añade la fecha o el plan afectado.',
+          '¿Falta algo en Menudo? Cuéntanos qué te gustaría ver. Construimos esta app escuchando a la comunidad.',
       },
     ] satisfies LegalSection[],
   },
   privacyChoices: {
-    title: 'Privacidad y control de cuenta',
+    title: 'Tu Cuenta, Tu Privacidad',
     intro:
-      'Esta página explica cómo gestionar tu cuenta, cambiar contraseña y pedir eliminación desde la app.',
+      'Gestiona tus datos y tu cuenta de forma sencilla y transparente.',
     sections: [
       {
-        title: 'Eliminar cuenta',
+        title: 'Eliminar mis datos',
         body:
-          'Desde Menudo puedes ir a Ajustes > Mi perfil > Eliminar cuenta. Si tienes una suscripción activa, cancélala primero desde Apple si no quieres cargos futuros.',
+          'Puedes solicitar el borrado completo de tu historial financiero desde Ajustes > Privacidad. Sin complicaciones.',
       },
       {
-        title: 'Cambiar contraseña',
+        title: 'Sincronización segura',
         body:
-          'Si usas correo y contraseña, puedes pedir un enlace de recuperación desde el login o desde la sección de seguridad dentro de tu perfil.',
-      },
-      {
-        title: 'Soporte y privacidad',
-        body:
-          'Usa el correo de soporte público si necesitas ayuda adicional con tu cuenta, tus datos o cualquier solicitud operativa.',
+          'Si conectas tu banco, recuerda que puedes desconectarlo cuando quieras. Nosotros solo leemos la información para organizarla por ti.',
       },
     ] satisfies LegalSection[],
   },
@@ -209,36 +184,37 @@ export const siteContent = {
     legalLinks: [
       { label: 'Privacidad', href: '/privacy-policy' as RouteKey },
       { label: 'Términos', href: '/terms' as RouteKey },
-      { label: 'Cuenta y privacidad', href: '/privacy-choices' as RouteKey },
+      { label: 'Opciones de Cuenta', href: '/privacy-choices' as RouteKey },
     ],
   },
 } as const;
 
 export const pageMetadata: Record<RouteKey, { title: string; description: string }> =
-  {
-    '/': {
-      title: 'Menudo',
-      description:
-        'Menudo organiza soporte, marca y páginas legales en una web simple y moderna.',
-    },
-    '/privacy-policy': {
-      title: 'Política de privacidad',
-      description:
-        'Política de privacidad pública para Menudo, lista para enlazarse desde App Store Connect.',
-    },
-    '/terms': {
-      title: 'Términos de servicio',
-      description:
-        'Términos de servicio públicos para Menudo, con estructura limpia y editable.',
-    },
-    '/support': {
-      title: 'Centro de soporte',
-      description:
-        'Soporte público para Menudo con correo, contacto y estructura para App Store Connect.',
-    },
-    '/privacy-choices': {
-      title: 'Privacidad y cuenta',
-      description:
-        'Explicación pública de cómo gestionar privacidad, contraseña y eliminación de cuenta en Menudo.',
-    },
-  };
+{
+  '/': {
+    title: 'Menudo — Finanzas Claros',
+    description:
+      'Toma el control de tu dinero con Menudo. La app de finanzas personales diseñada para darte claridad y paz mental.',
+  },
+  '/privacy-policy': {
+    title: 'Política de Privacidad',
+    description:
+      'Conoce cómo protegemos tus datos y respetamos tu privacidad en Menudo.',
+  },
+  '/terms': {
+    title: 'Términos de Servicio',
+    description:
+      'Condiciones de uso y acuerdo legal para los servicios de Menudo.',
+  },
+  '/support': {
+    title: 'Soporte Menudo',
+    description:
+      '¿Necesitas ayuda con Menudo? Encuentra respuestas y contacta con nuestro equipo de soporte.',
+  },
+  '/privacy-choices': {
+    title: 'Opciones de Privacidad',
+    description:
+      'Gestiona tu cuenta, tus datos y tus preferencias de privacidad en Menudo.',
+  },
+};
+

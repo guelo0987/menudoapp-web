@@ -3,15 +3,6 @@ import { siteContent } from '../content/site';
 export function FeatureGrid() {
   return (
     <section className="shell shell--wide section-stack">
-      <div className="section-heading fade-up">
-        <span className="eyebrow">Base web</span>
-        <h2>Una estructura pensada para marca, soporte y compliance</h2>
-        <p>
-          En vez de meter páginas sueltas dentro del backend, esta base separa
-          claramente landing, políticas y ayuda pública.
-        </p>
-      </div>
-
       <div className="feature-grid">
         {siteContent.featureCards.map((card, index) => (
           <article

@@ -39,16 +39,11 @@ export function HomeHero({ onNavigate }: HomeHeroProps) {
       </div>
 
       <div className="hero__visual fade-up" style={{ animationDelay: '160ms' }}>
-        <div className="hero-card">
-          <div className="hero-card__topline">
-            <span>{siteContent.hero.spotlightLabel}</span>
-            <span>assets reemplazables</span>
-          </div>
-          <img
-            src={siteContent.hero.spotlightImage}
-            alt="Placeholder del hero de Menudo"
-          />
-        </div>
+        <img
+          src={siteContent.hero.spotlightImage}
+          alt="Dashboard de Menudo"
+          className="hero__main-image"
+        />
       </div>
     </section>
   );
