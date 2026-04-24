@@ -2,39 +2,33 @@ import { useEffect, useMemo, useState } from 'react';
 import { SiteFooter } from './components/SiteFooter';
 import { SiteHeader } from './components/SiteHeader';
 import { LegalPage } from './components/LegalPage';
-import { siteContent, pageMetadata, RouteKey } from './content/site';
+import { siteContent, pageMetadata, RouteKey, Language } from './content/site';
+import { AuthConfirmPage } from './pages/AuthConfirmPage';
 import { HomePage } from './pages/HomePage';
+import { ResetPasswordPage } from './pages/ResetPasswordPage';
 
 function normalizePath(pathname: string): RouteKey {
   const path = pathname.endsWith('/') && pathname !== '/'
     ? pathname.slice(0, -1)
     : pathname;
-
-  if (path === '/legal/privacy') {
-    return '/privacy-policy';
-  }
-
-  if (path === '/legal/terms') {
-    return '/terms';
-  }
-
   if (
-    path === '/' ||
     path === '/privacy-policy' ||
     path === '/terms' ||
     path === '/support' ||
-    path === '/privacy-choices'
+    path === '/privacy-choices' ||
+    path === '/auth/confirm' ||
+    path === '/auth/reset-password'
   ) {
     return path;
   }
-
   return '/';
 }
 
 export default function App() {
-  const [path, setPath] = useState<RouteKey>(() =>
-    normalizePath(window.location.pathname),
-  );
+  const [path, setPath] = useState<RouteKey>(() => normalizePath(window.location.pathname));
+  const [lang, setLang] = useState<Language>('es');
+
+  const content = siteContent[lang];
 
   useEffect(() => {
     const onPopState = () => setPath(normalizePath(window.location.pathname));
@@ -43,20 +37,12 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const metadata = pageMetadata[path];
+    const metadata = (pageMetadata as any)[lang][path];
     document.title = `${metadata.title} — ${siteContent.brand.name}`;
-
-    const descriptionTag = document.querySelector(
-      'meta[name="description"]',
-    );
-    if (descriptionTag) {
-      descriptionTag.setAttribute('content', metadata.description);
-    }
-  }, [path]);
+  }, [path, lang]);
 
   const handleNavigate = (href: string) => {
     const nextPath = normalizePath(href);
-    if (nextPath === path) return;
     window.history.pushState({}, '', nextPath);
     setPath(nextPath);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -65,54 +51,24 @@ export default function App() {
   const page = useMemo(() => {
     switch (path) {
       case '/privacy-policy':
-        return (
-          <LegalPage
-            title={siteContent.privacyPolicy.title}
-            intro={siteContent.privacyPolicy.intro}
-            sections={siteContent.privacyPolicy.sections}
-            onNavigate={handleNavigate}
-          />
-        );
-      case '/terms':
-        return (
-          <LegalPage
-            title={siteContent.terms.title}
-            intro={siteContent.terms.intro}
-            sections={siteContent.terms.sections}
-            onNavigate={handleNavigate}
-          />
-        );
-      case '/support':
-        return (
-          <LegalPage
-            title={siteContent.support.title}
-            intro={siteContent.support.intro}
-            sections={siteContent.support.sections}
-            onNavigate={handleNavigate}
-          />
-        );
-      case '/privacy-choices':
-        return (
-          <LegalPage
-            title={siteContent.privacyChoices.title}
-            intro={siteContent.privacyChoices.intro}
-            sections={siteContent.privacyChoices.sections}
-            onNavigate={handleNavigate}
-          />
-        );
+        return <LegalPage title={(content as any).privacyPolicy?.title || 'Privacy'} intro={(content as any).privacyPolicy?.intro || ''} sections={(content as any).privacyPolicy?.sections || []} onNavigate={handleNavigate} />;
+      case '/auth/confirm':
+        return <AuthConfirmPage lang={lang} onNavigate={handleNavigate} />;
+      case '/auth/reset-password':
+        return <ResetPasswordPage lang={lang} onNavigate={handleNavigate} />;
       case '/':
       default:
-        return <HomePage onNavigate={handleNavigate} />;
+        return <HomePage onNavigate={handleNavigate} lang={lang} />;
     }
-  }, [path]);
+  }, [path, lang]);
 
   return (
     <div className="site-root">
       <div className="ambient ambient--left" />
       <div className="ambient ambient--right" />
-      <SiteHeader currentPath={path} onNavigate={handleNavigate} />
+      <SiteHeader currentPath={path} onNavigate={handleNavigate} lang={lang} setLang={setLang} />
       {page}
-      <SiteFooter onNavigate={handleNavigate} />
+      <SiteFooter onNavigate={handleNavigate} lang={lang} />
     </div>
   );
 }

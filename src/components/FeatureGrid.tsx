@@ -1,22 +1,27 @@
-import { siteContent } from '../content/site';
+import { siteContent, Language } from '../content/site';
 
-export function FeatureGrid() {
+type FeatureGridProps = {
+  lang: Language;
+};
+
+export function FeatureGrid({ lang }: FeatureGridProps) {
+  const content = siteContent[lang];
+
   return (
     <section className="shell shell--wide section-stack">
-      <div className="feature-grid">
-        {siteContent.featureCards.map((card, index) => (
+      <div className="benefit-grid">
+        {content.benefits.map((benefit, index) => (
           <article
-            key={card.title}
-            className={`feature-card feature-card--${card.accent} fade-up`}
+            key={benefit.title}
+            className="benefit-card fade-up"
             style={{ animationDelay: `${140 + index * 70}ms` }}
           >
-            <div className="feature-card__copy">
-              <span className="eyebrow eyebrow--dark">{card.eyebrow}</span>
-              <h3>{card.title}</h3>
-              <p>{card.body}</p>
+            <div className="benefit-card__art">
+              <img src={benefit.image} alt="" />
             </div>
-            <div className="feature-card__art">
-              <img src={card.image} alt="" />
+            <div className="benefit-card__copy">
+              <h3>{benefit.title}</h3>
+              <p>{benefit.body}</p>
             </div>
           </article>
         ))}

@@ -3,19 +3,30 @@ export type RouteKey =
   | '/privacy-policy'
   | '/terms'
   | '/support'
-  | '/privacy-choices';
+  | '/privacy-choices'
+  | '/auth/confirm'
+  | '/auth/reset-password';
+
+export type Language = 'es' | 'en';
 
 type NavItem = {
   label: string;
   href: RouteKey;
 };
 
-type FeatureCard = {
+type BenefitCard = {
+  title: string;
+  body: string;
+  image: string;
+};
+
+type InfoSection = {
   eyebrow: string;
   title: string;
   body: string;
   image: string;
-  accent: 'emerald' | 'orange' | 'cream';
+  items: string[];
+  imagePosition: 'left' | 'right';
 };
 
 type LegalSection = {
@@ -23,198 +34,179 @@ type LegalSection = {
   body: string;
 };
 
-const siteUrl =
-  import.meta.env.VITE_SITE_URL?.trim() || 'https://menudoapp.com';
-
-const supportEmail =
-  import.meta.env.VITE_SUPPORT_EMAIL?.trim() || 'hola@menudoapp.com';
-
-const supportPhone = import.meta.env.VITE_SUPPORT_PHONE?.trim() || '';
-const supportAddress = import.meta.env.VITE_SUPPORT_ADDRESS?.trim() || '';
-const appStoreUrl = import.meta.env.VITE_APP_STORE_URL?.trim() || '';
-const playStoreUrl = import.meta.env.VITE_PLAY_STORE_URL?.trim() || '';
-const instagramUrl = import.meta.env.VITE_INSTAGRAM_URL?.trim() || '';
-const tiktokUrl = import.meta.env.VITE_TIKTOK_URL?.trim() || '';
-
 export const siteContent = {
   brand: {
     name: 'Menudo',
     tag: '',
-    siteUrl,
-    supportEmail,
-    supportPhone,
-    supportAddress,
     logoMark: '/brand/menudo-logo.png',
-    wordmark: '/brand/menudo-logo.png',
+    qrCode: '/placeholders/qr-mock.svg',
+    supportEmail: 'info@garauyan.resend.app',
+    supportPhone: '',
+    supportAddress: '',
   },
-  stores: {
-    appStoreUrl,
-    playStoreUrl,
-  },
-  social: {
-    instagramUrl,
-    tiktokUrl,
-  },
-  nav: [
-    { label: 'Inicio', href: '/' },
-    { label: 'Privacidad', href: '/privacy-policy' },
-    { label: 'Términos', href: '/terms' },
-    { label: 'Soporte', href: '/support' },
-  ] satisfies NavItem[],
-  hero: {
-    eyebrow: 'Menudo App',
-    title: 'La app de finanzas que da gusto usar.',
-    body:
-      'Dile hola a una nueva forma de ver tu dinero. Menudo trae claridad y paz mental a tus gastos diarios para que tú solo te preocupes de disfrutar.',
-    chips: ['Gratis para probar', 'Fácil de usar', 'Diseño moderno'],
-    primaryCta: { label: 'Descargar ahora', href: '/support' as RouteKey },
-    secondaryCta: {
-      label: 'Saber más',
-      href: '/privacy-policy' as RouteKey,
-    },
+  heroShared: {
     spotlightLabel: 'Dashboard',
     spotlightImage: '/placeholders/nuevobannerok.png',
   },
-  featureCards: [
-    {
-      eyebrow: 'Ahorro',
-      title: 'Mira cómo crecen tus ahorros',
-      body:
-        'Sigue tus metas y mira cómo se acumula tu dinero. Es como un juego, pero con resultados reales en tu cuenta.',
-      image: '/placeholders/Gemini_Generated_Image_xvlbkjxvlbkjxvlb.png',
-      accent: 'cream',
+  es: {
+    nav: [
+      { label: 'Inicio', href: '/' },
+      { label: 'Privacidad', href: '/privacy-policy' },
+      { label: 'Términos', href: '/terms' },
+      { label: 'Soporte', href: '/support' },
+    ] satisfies NavItem[],
+    hero: {
+      eyebrow: 'Menudo App',
+      title: 'Mira tus gastos con claridad. Sin esfuerzo.',
+      body: 'Escribe, habla o automatiza: Menudo organiza tus finanzas para que tú no tengas que pensar en ello.',
+      chips: ['Gratis', 'Fácil', 'Moderno'],
+      primaryCta: 'Descargar ahora',
+      secondaryCta: 'Saber más',
     },
-    {
-      eyebrow: 'Simplicidad',
-      title: 'Arma tu presupuesto en segundos',
-      body:
-        'Sin hojas de cálculo infinitas. Divide tus gastos por categorías y mantén el control sin esfuerzo.',
-      image: '/placeholders/Gemini_Generated_Image_i689bii689bii689.png',
-      accent: 'emerald',
+    benefits: [
+      {
+        title: 'Registra sin fricción',
+        body: 'Escribe una nota, habla naturalmente o deja que las automatizaciones lo hagan por ti.',
+        image: '/Gemini_Generated_Image_i689bii689bii689.png',
+      },
+      {
+        title: 'Crea el hábito',
+        body: 'Cuando registrar toma segundos, realmente lo haces. La consistencia se vuelve natural.',
+        image: '/Gemini_Generated_Image_f7axcpf7axcpf7ax.png',
+      },
+      {
+        title: 'Visión completa',
+        body: 'Entiende tus patrones con gráficos automáticos que te dicen la verdad de tu dinero.',
+        image: '/Gemini_Generated_Image_xvlbkjxvlbkjxvlb.png',
+      },
+    ] satisfies BenefitCard[],
+    infoSections: [
+      {
+        eyebrow: 'Automatización',
+        title: 'Paga con Apple Pay. Registra solo.',
+        body: 'Cada vez que usas Apple Pay, Menudo registra el gasto automáticamente mediante Atajos de iOS.',
+        image: '/placeholders/feature-home.svg',
+        imagePosition: 'right',
+        items: ['Post-pago instantáneo', 'Cero esfuerzo', 'Atajos de Apple™'],
+      },
+      {
+        eyebrow: 'Reportes Detallados',
+        title: 'Tus finanzas contadas con gráficos.',
+        body: 'Visualiza a dónde va cada centavo con reportes automáticos generados por tu backend.',
+        image: '/Gemini_Generated_Image_a3ycc6a3ycc6a3yc.png',
+        imagePosition: 'left',
+        items: ['Gráficos de barras', 'Categorización mensual', 'Balance en tiempo real'],
+      },
+    ] satisfies InfoSection[],
+    checklist: {
+      title: 'Todo lo que necesitas',
+      body: 'Sin saltar entre herramientas o hojas de cálculo.',
+      items: ['Soporte multi-idioma', 'Atajos nativos', 'Sincronización segura', 'Categorías personalizadas'],
     },
-    {
-      eyebrow: 'Tranquilidad',
-      title: 'Adiós a las suscripciones olvidadas',
-      body:
-        'Menudo te avisa de esos pagos automáticos que ya no usas. Cancela lo que no necesitas con un toque.',
-      image: '/placeholders/Gemini_Generated_Image_f7axcpf7axcpf7ax.png',
-      accent: 'orange',
+    footer: {
+      legalTitle: 'Legal',
+      contactTitle: 'Contacto',
+      downloadTitle: 'Descarga',
+      rights: '© 2024 Menudo App. Todos los derechos reservados.',
     },
-  ] satisfies FeatureCard[],
-  supportHighlights: [
-    'Ayuda real por personas reales',
-    'Guías rápidas para empezar',
-    'Privacidad total garantizada',
-    'Soporte listo para Apple Store',
-  ],
-  privacyPolicy: {
-    title: 'Privacidad de Menudo',
-    intro:
-      'Nosotros también odiamos los textos legales largos. Aquí te explicamos de forma humana cómo cuidamos tu información.',
-    sections: [
-      {
-        title: '1. Qué sabemos de ti',
-        body:
-          'Solo lo necesario para que la app funcione: tu correo para la cuenta y los movimientos que tú decidas registrar o sincronizar. Nada más.',
-      },
-      {
-        title: '2. Tu dinero es tuyo',
-        body:
-          'No vendemos tus datos a nadie. Punto. Usamos tu información solo para mostrarte tus gráficos y ayudarte a ahorrar.',
-      },
-      {
-        title: '3. Tú tienes el control',
-        body:
-          'En cualquier momento puedes borrar tus datos o cerrar tu cuenta directamente desde los ajustes de la app. Tú decides.',
-      },
-    ] satisfies LegalSection[],
+    privacyPolicy: {
+      title: 'Privacidad de Menudo',
+      intro: 'Nosotros también odiamos los textos legales largos. Aquí te explicamos de forma humana cómo cuidamos tu información.',
+      sections: [
+        { title: '1. Qué sabemos de ti', body: 'Solo lo necesario para que la app funcione.' },
+        { title: '2. Tu dinero es tuyo', body: 'No vendemos tus datos a nadie.' },
+      ]
+    }
   },
-  terms: {
-    title: 'Términos de Uso',
-    intro:
-      'Al usar Menudo, aceptamos ser buenos vecinos. Aquí están las reglas básicas para que todo funcione bien.',
-    sections: [
+  en: {
+    nav: [
+      { label: 'Home', href: '/' },
+      { label: 'Privacy', href: '/privacy-policy' },
+      { label: 'Terms', href: '/terms' },
+      { label: 'Support', href: '/support' },
+    ] satisfies NavItem[],
+    hero: {
+      eyebrow: 'Menudo App',
+      title: 'See your spending clearly. Effortlessly.',
+      body: 'Type, speak, or automate: Menudo organizes your finances so you don’t have to think about it.',
+      chips: ['Free to try', 'Easy to use', 'Modern design'],
+      primaryCta: 'Download now',
+      secondaryCta: 'Learn more',
+    },
+    benefits: [
       {
-        title: '1. Uso Responsable',
-        body:
-          'Menudo es una herramienta para ayudarte. La información que pones es tu responsabilidad y nosotros nos encargamos de que la app siempre esté lista para ti.',
+        title: 'Frictionless Logging',
+        body: 'Type a note, speak naturally, or let automations do it for you.',
+        image: '/Gemini_Generated_Image_i689bii689bii689.png',
       },
       {
-        title: '2. Suscripciones',
-        body:
-          'Si eliges un plan Pro, Apple o Google gestionan el cobro de forma segura. Puedes cancelar cuando quieras sin preguntas.',
-      },
-    ] satisfies LegalSection[],
-  },
-  support: {
-    title: 'Centro de Ayuda',
-    intro:
-      '¿Algo no funciona como esperabas? No te preocupes, estamos aquí para echarte una mano.',
-    sections: [
-      {
-        title: 'Dudas con tu cuenta',
-        body:
-          'Si tienes problemas para entrar o quieres cambiar algo de tu perfil, escríbenos y lo resolvemos en un momento.',
+        title: 'Build the habit',
+        body: 'When tracking takes seconds, you actually do it. Consistency becomes natural.',
+        image: '/Gemini_Generated_Image_f7axcpf7axcpf7ax.png',
       },
       {
-        title: 'Sugerencias',
-        body:
-          '¿Falta algo en Menudo? Cuéntanos qué te gustaría ver. Construimos esta app escuchando a la comunidad.',
+        title: 'See the full picture',
+        body: 'Understand your patterns with automatic charts that tell you the truth about your money.',
+        image: '/Gemini_Generated_Image_xvlbkjxvlbkjxvlb.png',
       },
-    ] satisfies LegalSection[],
-  },
-  privacyChoices: {
-    title: 'Tu Cuenta, Tu Privacidad',
-    intro:
-      'Gestiona tus datos y tu cuenta de forma sencilla y transparente.',
-    sections: [
+    ] satisfies BenefitCard[],
+    infoSections: [
       {
-        title: 'Eliminar mis datos',
-        body:
-          'Puedes solicitar el borrado completo de tu historial financiero desde Ajustes > Privacidad. Sin complicaciones.',
+        eyebrow: 'Automation',
+        title: 'Pay with Apple Pay. Log automatically.',
+        body: 'Every time you tap to pay, Menudo automatically logs your expense via iOS Shortcuts.',
+        image: '/placeholders/feature-home.svg',
+        imagePosition: 'right',
+        items: ['Instant post-payment', 'Zero effort tracking', 'Works with Apple Shortcuts™'],
       },
       {
-        title: 'Sincronización segura',
-        body:
-          'Si conectas tu banco, recuerda que puedes desconectarlo cuando quieras. Nosotros solo leemos la información para organizarla por ti.',
+        eyebrow: 'Detailed Reports',
+        title: 'Your finances, told with charts.',
+        body: 'Visualize where every cent goes with automatic reports generated by your backend.',
+        image: '/Gemini_Generated_Image_a3ycc6a3ycc6a3yc.png',
+        imagePosition: 'left',
+        items: ['Bar charts', 'Monthly categorization', 'Real-time balance'],
       },
-    ] satisfies LegalSection[],
-  },
-  footer: {
-    legalLinks: [
-      { label: 'Privacidad', href: '/privacy-policy' as RouteKey },
-      { label: 'Términos', href: '/terms' as RouteKey },
-      { label: 'Opciones de Cuenta', href: '/privacy-choices' as RouteKey },
-    ],
-  },
+    ] satisfies InfoSection[],
+    checklist: {
+      title: 'Everything you need',
+      body: 'No jumping between tools or spreadsheets.',
+      items: ['Multi-language support', 'Native Shortcuts', 'Secure sync', 'Custom categories'],
+    },
+    footer: {
+      legalTitle: 'Legal',
+      contactTitle: 'Contact',
+      downloadTitle: 'Download',
+      rights: '© 2024 Menudo App. All rights reserved.',
+    },
+    privacyPolicy: {
+      title: 'Privacy Policy',
+      intro: 'We hate long legal texts too. Here is a human explanation of how we protect your data.',
+      sections: [
+        { title: '1. What we know', body: 'Only what is necessary for the app to work.' },
+        { title: '2. Your money is yours', body: 'We do not sell your data to anyone.' },
+      ]
+    }
+  }
 } as const;
 
-export const pageMetadata: Record<RouteKey, { title: string; description: string }> =
-{
-  '/': {
-    title: 'Menudo — Finanzas Claros',
-    description:
-      'Toma el control de tu dinero con Menudo. La app de finanzas personales diseñada para darte claridad y paz mental.',
+export const pageMetadata = {
+  es: {
+    '/': { title: 'Menudo — Finanzas Claros', description: 'Toma el control de tu dinero.' },
+    '/privacy-policy': { title: 'Privacidad', description: 'Cómo protegemos tus datos.' },
+    '/terms': { title: 'Términos', description: 'Condiciones de uso.' },
+    '/support': { title: 'Soporte', description: 'Ayuda con Menudo.' },
+    '/privacy-choices': { title: 'Opciones de Privacidad', description: 'Gestiona tus datos.' },
+    '/auth/confirm': { title: 'Correo verificado', description: 'Confirmación de cuenta en Menudo.' },
+    '/auth/reset-password': { title: 'Nueva contraseña', description: 'Cambia tu contraseña de Menudo.' },
   },
-  '/privacy-policy': {
-    title: 'Política de Privacidad',
-    description:
-      'Conoce cómo protegemos tus datos y respetamos tu privacidad en Menudo.',
-  },
-  '/terms': {
-    title: 'Términos de Servicio',
-    description:
-      'Condiciones de uso y acuerdo legal para los servicios de Menudo.',
-  },
-  '/support': {
-    title: 'Soporte Menudo',
-    description:
-      '¿Necesitas ayuda con Menudo? Encuentra respuestas y contacta con nuestro equipo de soporte.',
-  },
-  '/privacy-choices': {
-    title: 'Opciones de Privacidad',
-    description:
-      'Gestiona tu cuenta, tus datos y tus preferencias de privacidad en Menudo.',
-  },
+  en: {
+    '/': { title: 'Menudo — Clear Finance', description: 'Take control of your money.' },
+    '/privacy-policy': { title: 'Privacy', description: 'How we protect your data.' },
+    '/terms': { title: 'Terms', description: 'Terms of service.' },
+    '/support': { title: 'Support', description: 'Help with Menudo.' },
+    '/privacy-choices': { title: 'Privacy Choices', description: 'Manage your data.' },
+    '/auth/confirm': { title: 'Email verified', description: 'Account confirmation for Menudo.' },
+    '/auth/reset-password': { title: 'New password', description: 'Change your Menudo password.' },
+  }
 };
-

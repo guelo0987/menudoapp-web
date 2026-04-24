@@ -1,58 +1,40 @@
-import { siteContent } from '../content/site';
+import { siteContent, Language } from '../content/site';
 import { LinkButton } from './LinkButton';
 
 type SiteHeaderProps = {
   currentPath: string;
   onNavigate: (href: string) => void;
+  lang: Language;
+  setLang: (lang: Language) => void;
 };
 
-export function SiteHeader({ currentPath, onNavigate }: SiteHeaderProps) {
+export function SiteHeader({ currentPath, onNavigate, lang, setLang }: SiteHeaderProps) {
+  const content = siteContent[lang];
+
   return (
     <header className="site-header shell shell--wide">
-      <a
-        className="brand-lockup"
-        href="/"
-        onClick={(event) => {
-          event.preventDefault();
-          onNavigate('/');
-        }}
-      >
-        <img
-          src={siteContent.brand.logoMark}
-          alt={`${siteContent.brand.name} logo`}
-          className="brand-lockup__mark"
-        />
-        <div>
+      <div className="header-left">
+        <a className="brand-lockup" href="/" onClick={(e) => { e.preventDefault(); onNavigate('/'); }}>
+          <img src={siteContent.brand.logoMark} alt="logo" className="brand-lockup__mark" />
           <p className="brand-lockup__name">{siteContent.brand.name}</p>
-          <p className="brand-lockup__tag">{siteContent.brand.tag}</p>
-        </div>
-      </a>
+        </a>
+      </div>
 
-      <nav className="site-nav" aria-label="Principal">
-        {siteContent.nav.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            className={`site-nav__link ${
-              currentPath === item.href ? 'site-nav__link--active' : ''
-            }`}
-            onClick={(event) => {
-              event.preventDefault();
-              onNavigate(item.href);
-            }}
-          >
+      <nav className="site-nav">
+        {content.nav.map((item) => (
+          <a key={item.href} href={item.href} className={`site-nav__link ${currentPath === item.href ? 'site-nav__link--active' : ''}`}
+            onClick={(e) => { e.preventDefault(); onNavigate(item.href); }}>
             {item.label}
           </a>
         ))}
       </nav>
 
-      <div className="site-header__actions">
-        <LinkButton
-          href="/support"
-          variant="secondary"
-          onNavigate={onNavigate}
-        >
-          Soporte
+      <div className="header-right">
+        <button className="lang-switcher" onClick={() => setLang(lang === 'es' ? 'en' : 'es')}>
+          {lang === 'es' ? 'EN' : 'ES'}
+        </button>
+        <LinkButton href="/support" variant="secondary" onNavigate={onNavigate}>
+          {lang === 'es' ? 'Soporte' : 'Support'}
         </LinkButton>
       </div>
     </header>
