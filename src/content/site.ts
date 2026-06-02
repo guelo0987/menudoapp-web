@@ -5,7 +5,8 @@ export type RouteKey =
   | '/support'
   | '/privacy-choices'
   | '/auth/confirm'
-  | '/auth/reset-password';
+  | '/auth/reset-password'
+  | '/invitations/join';
 
 export type Language = 'es' | 'en';
 
@@ -199,6 +200,7 @@ export const pageMetadata = {
     '/privacy-choices': { title: 'Opciones de Privacidad', description: 'Gestiona tus datos.' },
     '/auth/confirm': { title: 'Correo verificado', description: 'Confirmación de cuenta en Menudo.' },
     '/auth/reset-password': { title: 'Nueva contraseña', description: 'Cambia tu contraseña de Menudo.' },
+    '/invitations/join': { title: 'Invitación a lista compartida', description: 'Únete a una lista compartida en Menudo.' },
   },
   en: {
     '/': { title: 'Menudo — Clear Finance', description: 'Take control of your money.' },
@@ -208,5 +210,6 @@ export const pageMetadata = {
     '/privacy-choices': { title: 'Privacy Choices', description: 'Manage your data.' },
     '/auth/confirm': { title: 'Email verified', description: 'Account confirmation for Menudo.' },
     '/auth/reset-password': { title: 'New password', description: 'Change your Menudo password.' },
+    '/invitations/join': { title: 'Shared List Invitation', description: 'Join a shared list on Menudo.' },
   }
 };

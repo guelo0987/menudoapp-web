@@ -6,6 +6,7 @@ import { siteContent, pageMetadata, RouteKey, Language } from './content/site';
 import { AuthConfirmPage } from './pages/AuthConfirmPage';
 import { HomePage } from './pages/HomePage';
 import { ResetPasswordPage } from './pages/ResetPasswordPage';
+import { InvitationJoinPage } from './pages/InvitationJoinPage';
 
 function normalizePath(pathname: string): RouteKey {
   const path = pathname.endsWith('/') && pathname !== '/'
@@ -17,7 +18,8 @@ function normalizePath(pathname: string): RouteKey {
     path === '/support' ||
     path === '/privacy-choices' ||
     path === '/auth/confirm' ||
-    path === '/auth/reset-password'
+    path === '/auth/reset-password' ||
+    path === '/invitations/join'
   ) {
     return path;
   }
@@ -56,6 +58,8 @@ export default function App() {
         return <AuthConfirmPage lang={lang} onNavigate={handleNavigate} />;
       case '/auth/reset-password':
         return <ResetPasswordPage lang={lang} onNavigate={handleNavigate} />;
+      case '/invitations/join':
+        return <InvitationJoinPage lang={lang} onNavigate={handleNavigate} />;
       case '/':
       default:
         return <HomePage onNavigate={handleNavigate} lang={lang} />;
