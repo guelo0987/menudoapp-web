@@ -12,6 +12,9 @@ function normalizePath(pathname: string): RouteKey {
   const path = pathname.endsWith('/') && pathname !== '/'
     ? pathname.slice(0, -1)
     : pathname;
+  if (path === '/privacy') {
+    return '/privacy-policy';
+  }
   if (
     path === '/privacy-policy' ||
     path === '/terms' ||
@@ -40,7 +43,25 @@ export default function App() {
 
   useEffect(() => {
     const metadata = (pageMetadata as any)[lang][path];
-    document.title = `${metadata.title} — ${siteContent.brand.name}`;
+    const fullTitle = `${metadata.title} — ${siteContent.brand.name}`;
+    document.title = fullTitle;
+
+    const descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta) {
+      descMeta.setAttribute('content', metadata.description);
+    }
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', fullTitle);
+
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', metadata.description);
+
+    const twitterTitle = document.querySelector('meta[property="twitter:title"]');
+    if (twitterTitle) twitterTitle.setAttribute('content', fullTitle);
+
+    const twitterDesc = document.querySelector('meta[property="twitter:description"]');
+    if (twitterDesc) twitterDesc.setAttribute('content', metadata.description);
   }, [path, lang]);
 
   const handleNavigate = (href: string) => {
@@ -54,6 +75,8 @@ export default function App() {
     switch (path) {
       case '/privacy-policy':
         return <LegalPage title={(content as any).privacyPolicy?.title || 'Privacy'} intro={(content as any).privacyPolicy?.intro || ''} sections={(content as any).privacyPolicy?.sections || []} onNavigate={handleNavigate} />;
+      case '/terms':
+        return <LegalPage title={(content as any).terms?.title || 'Terms'} intro={(content as any).terms?.intro || ''} sections={(content as any).terms?.sections || []} onNavigate={handleNavigate} />;
       case '/auth/confirm':
         return <AuthConfirmPage lang={lang} onNavigate={handleNavigate} />;
       case '/auth/reset-password':

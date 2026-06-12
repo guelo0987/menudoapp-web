@@ -1,0 +1,34 @@
+{
+  "1.0.0": {
+    "es": [
+      "Mejoras generales de rendimiento y velocidad de carga.",
+      "Corrección de errores internos y mayor estabilidad.",
+      "Mejoras en el diseño visual y transiciones de pantalla.",
+      "Actualización de compatibilidad para los Atajos de iOS.",
+      "Soporte completo de idiomas (Español e Inglés)."
+    ],
+    "en": [
+      "General performance and load speed improvements.",
+      "Internal bug fixes and enhanced stability.",
+      "Visual design and screen transition enhancements.",
+      "Updated compatibility for iOS Shortcuts.",
+      "Full support for English and Spanish languages."
+    ]
+  },
+  "1.0.0+9": {
+    "es": [
+      "Mejoras generales de rendimiento y velocidad de carga.",
+      "Corrección de errores internos y mayor estabilidad.",
+      "Mejoras en el diseño visual y transiciones de pantalla.",
+      "Actualización de compatibilidad para los Atajos de iOS.",
+      "Soporte completo de idiomas (Español e Inglés)."
+    ],
+    "en": [
+      "General performance and load speed improvements.",
+      "Internal bug fixes and enhanced stability.",
+      "Visual design and screen transition enhancements.",
+      "Updated compatibility for iOS Shortcuts.",
+      "Full support for English and Spanish languages."
+    ]
+  }
+}

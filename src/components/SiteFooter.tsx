@@ -35,7 +35,7 @@ export function SiteFooter({ onNavigate, lang }: SiteFooterProps) {
 
           <div className="footer-column">
             <h4>{content.footer.contactTitle}</h4>
-            <a href="mailto:hola@menudoapp.com">Email</a>
+            <a href={`mailto:${siteContent.brand.supportEmail}`}>Email</a>
             <a href="https://instagram.com/menudoapp" target="_blank" rel="noreferrer">Instagram</a>
           </div>
 
