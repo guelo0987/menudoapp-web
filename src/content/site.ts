@@ -116,7 +116,7 @@ export const siteContent = {
       sections: [
         {
           title: '1. Responsable del Tratamiento',
-          body: 'Menudo App es desarrollada y operada por Garauyan, con domicilio en la República Dominicana. Nos comprometemos a proteger su privacidad y a tratar sus datos personales de conformidad con los más altos estándares de transparencia y seguridad. Para cualquier consulta sobre este documento, puede contactarnos en: info@garauyan.resend.app.'
+          body: 'Menudo App es desarrollada y operada por Miguel Cruz, con domicilio en la República Dominicana. Nos comprometemos a proteger su privacidad y a tratar sus datos personales de conformidad con los más altos estándares de transparencia y seguridad. Para cualquier consulta sobre este documento, puede contactarnos en: info@garauyan.resend.app.'
         },
         {
           title: '2. Información que Recopilamos',
@@ -136,7 +136,7 @@ export const siteContent = {
         },
         {
           title: '6. Sus Derechos y Ley Aplicable',
-          body: 'Usted tiene el derecho de acceder, rectificar, exportar o solicitar la eliminación total de sus datos en cualquier momento. Al ser operado por Garauyan, este acuerdo se rige por las leyes de la República Dominicana, ofreciendo además mecanismos de control global para cumplir con el estándar GDPR de protección de datos.'
+          body: 'Usted tiene el derecho de acceder, rectificar, exportar o solicitar la eliminación total de sus datos en cualquier momento. Al ser operado por Miguel Cruz, este acuerdo se rige por las leyes de la República Dominicana, ofreciendo además mecanismos de control global para cumplir con el estándar GDPR de protección de datos.'
         }
       ]
     },
@@ -166,7 +166,7 @@ export const siteContent = {
         },
         {
           title: '6. Limitación de Responsabilidad y Jurisdicción',
-          body: 'La aplicación se proporciona "tal cual" sin garantías de ningún tipo. Garauyan no será responsable de pérdidas financieras derivadas del uso del estimador de presupuestos o fallos de red. Estos términos se rigen por las leyes de la República Dominicana, y cualquier disputa será sometida a la jurisdicción exclusiva de sus tribunales.'
+          body: 'La aplicación se proporciona "tal cual" sin garantías de ningún tipo. Miguel Cruz no será responsable de pérdidas financieras derivadas del uso del estimador de presupuestos o fallos de red. Estos términos se rigen por las leyes de la República Dominicana, y cualquier disputa será sometida a la jurisdicción exclusiva de sus tribunales.'
         }
       ]
     }
@@ -238,7 +238,7 @@ export const siteContent = {
       sections: [
         {
           title: '1. Data Controller',
-          body: 'Menudo App is developed and operated by Garauyan, based in the Dominican Republic. We are committed to protecting your privacy and treating your personal data in accordance with the highest standards of transparency and security. For any inquiries regarding this policy, please contact us at: info@garauyan.resend.app.'
+          body: 'Menudo App is developed and operated by Miguel Cruz, based in the Dominican Republic. We are committed to protecting your privacy and treating your personal data in accordance with the highest standards of transparency and security. For any inquiries regarding this policy, please contact us at: info@garauyan.resend.app.'
         },
         {
           title: '2. Information We Collect',
@@ -258,7 +258,7 @@ export const siteContent = {
         },
         {
           title: '6. Your Rights and Governing Law',
-          body: 'You retain the right to access, correct, export, or permanently delete your data at any time. Operated by Garauyan, this agreement is governed by the laws of the Dominican Republic, while incorporating global compliance standards (including GDPR rights) for all users.'
+          body: 'You retain the right to access, correct, export, or permanently delete your data at any time. Operated by Miguel Cruz, this agreement is governed by the laws of the Dominican Republic, while incorporating global compliance standards (including GDPR rights) for all users.'
         }
       ]
     },
@@ -288,7 +288,7 @@ export const siteContent = {
         },
         {
           title: '6. Limitation of Liability and Governing Law',
-          body: 'The App is provided on an "as-is" basis without warranties of any kind. Garauyan shall not be liable for financial losses arising from budget estimate calculations or network outages. These Terms are governed by the laws of the Dominican Republic, and any disputes shall be resolved in its courts.'
+          body: 'The App is provided on an "as-is" basis without warranties of any kind. Miguel Cruz shall not be liable for financial losses arising from budget estimate calculations or network outages. These Terms are governed by the laws of the Dominican Republic, and any disputes shall be resolved in its courts.'
         }
       ]
     }
