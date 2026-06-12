@@ -30,5 +30,19 @@
       "Updated compatibility for iOS Shortcuts.",
       "Full support for English and Spanish languages."
     ]
+  },
+  "1.0.0+10": {
+    "es": [
+      "Mejoras generales de rendimiento y velocidad de carga.",
+      "Corrección de errores internos y mayor estabilidad.",
+      "Nuevos flujos legales de Privacidad y Términos para el App Store.",
+      "Optimización en Atajos y lógica de sincronización."
+    ],
+    "en": [
+      "General performance and load speed improvements.",
+      "Internal bug fixes and enhanced stability.",
+      "New App Store Privacy and Terms legal flows.",
+      "Siri Shortcuts optimizations and offline sync updates."
+    ]
   }
 }
