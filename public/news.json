@@ -44,5 +44,23 @@
       "New App Store Privacy and Terms legal flows.",
       "Siri Shortcuts optimizations and offline sync updates."
     ]
+  },
+  "1.0.0+11": {
+    "es": [
+      "Ocultamos los gastos programados para el futuro para que no afecten tus saldos y presupuestos mensuales hasta que llegue su fecha.",
+      "Mejoramos la edición de montos con comas y decimales en tus carteras y transacciones repetitivas de forma más fluida.",
+      "Los administradores de listas compartidas ahora pueden editar y borrar transacciones creadas por otros miembros de la lista.",
+      "Añadimos un candado visual 🔒 en las transacciones repetitivas de otros usuarios para evitar cambios accidentales.",
+      "Actualización inteligente: al borrar el último cobro de una transacción repetitiva, esta se cancelará de forma automática en el servidor.",
+      "Los gráficos del dashboard ahora abrevian cifras grandes con 'M' para millones de forma más limpia (ej. 1.2M)."
+    ],
+    "en": [
+      "Future scheduled transactions are now hidden so they don't affect your budgets and balances until their date arrives.",
+      "Improved numeric input formatting with commas and decimals for recurring transactions and wallets.",
+      "List administrators can now edit and delete transactions created by other members in shared lists.",
+      "Added a visual lock 🔒 on recurring transactions created by other list members to prevent accidental changes.",
+      "Smart cleanup: deleting the last transaction of a recurrence automatically cancels its schedule.",
+      "Dashboard charts now beautifully abbreviate large amounts with 'M' for millions (e.g. 1.2M)."
+    ]
   }
 }
