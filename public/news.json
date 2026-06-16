@@ -62,5 +62,21 @@
       "Smart cleanup: deleting the last transaction of a recurrence automatically cancels its schedule.",
       "Dashboard charts now beautifully abbreviate large amounts with 'M' for millions (e.g. 1.2M)."
     ]
+  },
+  "1.0.0+13": {
+    "es": [
+      "Notificaciones push bilingües al procesarse gastos o ingresos recurrentes.",
+      "Recordatorios anticipados de pago 24 horas antes del cobro programado (excluye diario).",
+      "Ajustes de notificaciones de recurrentes y recordatorios directamente en la pantalla de recurrentes.",
+      "Resolución automática en los Atajos de Siri de iOS: el modal ahora se cierra al seleccionar una categoría.",
+      "Mayor estabilidad en las Live Activities ante bloqueos o desactivaciones del sistema en iOS."
+    ],
+    "en": [
+      "Bilingual push notifications when recurring expenses or incomes are processed.",
+      "Upcoming payment reminders 24 hours before scheduled transactions (excludes daily).",
+      "Recurring and upcoming reminder notification toggles directly in the Recurring settings.",
+      "Siri Shortcuts modal auto-closes on iOS once a category is selected.",
+      "Enhanced stability for iOS Live Activities when disabled or restricted by the system."
+    ]
   }
 }
