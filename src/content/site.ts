@@ -128,7 +128,7 @@ export const siteContent = {
         },
         {
           title: '4. Proveedores y Almacenamiento',
-          body: 'Sus datos se guardan y procesan utilizando proveedores tecnológicos líderes de la industria:\n• Supabase: Infraestructura de base de datos cifrada, autenticación de usuarios y almacenamiento en la nube.\n• RevenueCat y Apple App Store: Gestión segura del estado de suscripción y facturación premium. Nosotros no almacenamos detalles de sus tarjetas de crédito o débito.\n• Apple APNs: Envío de notificaciones push en tiempo real sobre la actividad en listas compartidas.'
+          body: 'Sus datos se guardan y procesan utilizando proveedores tecnológicos líderes de la industria:\n• Supabase: Infraestructura de base de datos cifrada, autenticación de usuarios y almacenamiento en la nube.\n• RevenueCat y Apple App Store: Gestión segura del estado de suscripción y facturación premium. Nosotros no almacenamos detalles de sus tarjetas de crédito o débito.\n• Apple APNs: Envío de notificaciones push en tiempo real sobre la actividad en listas compartidas.\n• Sentry: Monitoreo de estabilidad de la aplicación y reporte de fallos y errores del servidor.\n• PostHog: Análisis de uso y eventos del producto en la aplicación móvil y la web.'
         },
         {
           title: '5. Retención de Datos y Seguridad',
@@ -250,7 +250,7 @@ export const siteContent = {
         },
         {
           title: '4. Providers and Storage',
-          body: 'Your data is stored and processed securely using industry-leading technology providers:\n• Supabase: For secure, encrypted database hosting, user authentication, and cloud storage.\n• RevenueCat & Apple App Store: For secure management of premium subscription status and billing. We never store or handle your credit/debit card details.\n• Apple APNs: For sending clean, real-time push notifications regarding collaborative list activities.'
+          body: 'Your data is stored and processed securely using industry-leading technology providers:\n• Supabase: For secure, encrypted database hosting, user authentication, and cloud storage.\n• RevenueCat & Apple App Store: For secure management of premium subscription status and billing. We never store or handle your credit/debit card details.\n• Apple APNs: For sending clean, real-time push notifications regarding collaborative list activities.\n• Sentry: For application stability monitoring and capturing system and server errors.\n• PostHog: For product analytics and tracking user interactions inside the mobile app and website.'
         },
         {
           title: '5. Data Retention and Security',
