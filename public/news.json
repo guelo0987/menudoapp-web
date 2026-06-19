@@ -78,5 +78,17 @@
       "Siri Shortcuts modal auto-closes on iOS once a category is selected.",
       "Enhanced stability for iOS Live Activities when disabled or restricted by the system."
     ]
+  },
+  "1.0.0+20": {
+    "es": [
+      "Resolvimos el problema de duplicación de transacciones al guardar manualmente (idempotencia blindada).",
+      "Sincronización instantánea de eliminaciones de transacciones por swipe desde el Dashboard y detalles de Categorías.",
+      "Mayor tolerancia a tiempos de espera (hasta 10 segundos) al categorizar con Inteligencia Artificial."
+    ],
+    "en": [
+      "Resolved transaction duplication when saving manual expenses (hardened idempotency).",
+      "Instant real-time synchronization of transaction deletions via swipe on Dashboard and Category Details.",
+      "Increased AI parsing timeout to 10 seconds to tolerate serverless cold start latencies."
+    ]
   }
 }
