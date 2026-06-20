@@ -28,7 +28,7 @@ export function HomeHero({ onNavigate, lang }: HomeHeroProps) {
   const content = siteContent[lang].hero;
 
   return (
-    <section className="hero shell shell--wide">
+    <section className="hero shell shell--wide reveal-on-scroll">
       <div className="hero__copy fade-up">
         <span className="eyebrow">{content.eyebrow}</span>
         <h1>{content.title}</h1>

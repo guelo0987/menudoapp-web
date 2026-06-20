@@ -104,16 +104,16 @@ function FrictionlessLoggingWidget({ lang }: { lang: Language }) {
       <div className="logging-container">
         {step === 0 ? (
           <div className="logging-input-box fade-in">
-            <span className="logging-prompt-icon">
-              <MicIcon />
+            <span className="logging-prompt-icon" style={{ display: 'inline-flex', alignItems: 'center' }}>
+              🎙️
             </span>
             <span className="logging-typed-text">{text}</span>
             <span className="logging-caret" />
           </div>
         ) : (
           <div className="logging-card-box fade-in">
-            <div className="logging-card-icon-wrapper">
-              <CoffeeIcon />
+            <div className="logging-card-icon-wrapper" style={{ background: '#f4f6f4' }}>
+              <span style={{ fontSize: '1.1rem' }}>☕</span>
             </div>
             <div className="logging-card-info">
               <span className="logging-card-title">
@@ -164,7 +164,7 @@ function HabitBuilderWidget({ lang }: { lang: Language }) {
           })}
         </div>
         <div className="habit-badge fade-in">
-          <FlameIcon />
+          <span style={{ fontSize: '0.85rem', lineHeight: 1 }}>🔥</span>
           <span>
             {streak} {lang === 'es' ? 'días seguidos' : 'day streak'}
           </span>
@@ -174,73 +174,76 @@ function HabitBuilderWidget({ lang }: { lang: Language }) {
   );
 }
 
-// Widget 3: Full Picture (Bar chart animations with brand avocado colors & categories)
+// Widget 3: Full Picture (Stunning Area Chart with Avocado gradients & legend)
 function FullPictureWidget({ lang }: { lang: Language }) {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
     setAnimate(true);
-    const interval = setInterval(() => {
-      setAnimate(false);
-      setTimeout(() => setAnimate(true), 150);
-    }, 5000);
-    return () => clearInterval(interval);
   }, []);
 
-  const bars = [
-    { 
-      Icon: FoodIcon, 
-      name: lang === 'es' ? 'Comida' : 'Food', 
-      amount: lang === 'es' ? '$4,200' : '$420', 
-      height: '92%', 
-      color: 'var(--accent)' 
-    },
-    { 
-      Icon: TransportIcon, 
-      name: lang === 'es' ? 'Transp.' : 'Transp.', 
-      amount: lang === 'es' ? '$2,800' : '$280', 
-      height: '72%', 
-      color: '#346538' 
-    },
-    { 
-      Icon: BillsIcon, 
-      name: lang === 'es' ? 'Vivienda' : 'Bills', 
-      amount: lang === 'es' ? '$1,800' : '$180', 
-      height: '52%', 
-      color: 'var(--accent-light)' 
-    },
-    { 
-      Icon: LeisureIcon, 
-      name: lang === 'es' ? 'Ocio' : 'Leisure', 
-      amount: lang === 'es' ? '$900' : '$90', 
-      height: '32%', 
-      color: '#a3d8b5' 
-    }
+  const legendItems = [
+    { emoji: '🍔', name: lang === 'es' ? 'Comida' : 'Food', amount: lang === 'es' ? '$4,200' : '$420', percent: '45%' },
+    { emoji: '🚗', name: lang === 'es' ? 'Transporte' : 'Transp.', amount: lang === 'es' ? '$2,800' : '$280', percent: '30%' },
+    { emoji: '🏠', name: lang === 'es' ? 'Vivienda' : 'Bills', amount: lang === 'es' ? '$1,800' : '$180', percent: '18%' },
+    { emoji: '🎮', name: lang === 'es' ? 'Ocio' : 'Leisure', amount: lang === 'es' ? '$900' : '$90', percent: '7%' }
   ];
 
   return (
     <div className="benefit-widget benefit-widget--chart">
-      <div className="chart-container">
-        {bars.map((bar, idx) => (
-          <div key={idx} className="chart-col">
-            <div className="chart-bar-track">
-              <div 
-                className="chart-bar-fill" 
-                style={{ 
-                  height: animate ? bar.height : '0%',
-                  backgroundColor: bar.color,
-                  transitionDelay: `${idx * 100}ms`
-                }}
-              />
-            </div>
-            <div className="chart-meta">
-              <span className="chart-icon-svg" style={{ display: 'inline-flex', alignItems: 'center' }}>
-                <bar.Icon />
-              </span>
-              <span className="chart-label">{bar.amount}</span>
-            </div>
+      <div className="modern-chart-card">
+        {/* SVG Area Chart */}
+        <div className="chart-svg-wrapper">
+          <svg viewBox="0 0 300 120" className="spending-chart-svg">
+            <defs>
+              <linearGradient id="chart-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="var(--accent)" stopOpacity="0.25" />
+                <stop offset="100%" stopColor="var(--accent)" stopOpacity="0.00" />
+              </linearGradient>
+            </defs>
+            {/* Grid Lines */}
+            <line x1="0" y1="20" x2="300" y2="20" stroke="var(--border)" strokeWidth="0.5" strokeDasharray="4 4" />
+            <line x1="0" y1="60" x2="300" y2="60" stroke="var(--border)" strokeWidth="0.5" strokeDasharray="4 4" />
+            <line x1="0" y1="100" x2="300" y2="100" stroke="var(--border)" strokeWidth="0.5" strokeDasharray="4 4" />
+            
+            {/* Area Path */}
+            <path
+              d="M 0 120 L 0 90 Q 40 50 80 70 T 160 30 T 240 50 T 300 20 L 300 120 Z"
+              fill="url(#chart-grad)"
+              className={`chart-area ${animate ? 'chart-area--animate' : ''}`}
+            />
+            {/* Line Path */}
+            <path
+              d="M 0 90 Q 40 50 80 70 T 160 30 T 240 50 T 300 20"
+              fill="none"
+              stroke="var(--accent)"
+              strokeWidth="2.5"
+              className={`chart-line ${animate ? 'chart-line--animate' : ''}`}
+            />
+            {/* Pulsing Highlight Dot */}
+            <circle cx="160" cy="30" r="5" fill="var(--accent)" />
+            <circle cx="160" cy="30" r="10" fill="none" stroke="var(--accent)" strokeWidth="1.5" className="chart-pulse-dot" />
+          </svg>
+          {/* Floating Tooltip */}
+          <div className="chart-tooltip fade-in">
+            <span className="chart-tooltip-emoji">🍔</span>
+            <span className="chart-tooltip-text">{lang === 'es' ? 'Mayor gasto' : 'Peak spend'}</span>
           </div>
-        ))}
+        </div>
+
+        {/* Legend Grid */}
+        <div className="chart-legend-grid">
+          {legendItems.map((item, idx) => (
+            <div key={idx} className="chart-legend-item">
+              <span className="legend-emoji">{item.emoji}</span>
+              <div className="legend-info">
+                <span className="legend-name">{item.name}</span>
+                <span className="legend-amount">{item.amount}</span>
+              </div>
+              <span className="legend-badge">{item.percent}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -248,7 +251,7 @@ function FullPictureWidget({ lang }: { lang: Language }) {
 
 export function AnimatedBenefits({ lang }: AnimatedBenefitsProps) {
   return (
-    <section className="shell shell--wide animated-benefits-section">
+    <section className="shell shell--wide animated-benefits-section reveal-on-scroll">
       <div className="animated-benefits-grid">
         {/* Card 1 */}
         <div className="benefit-row-card fade-up" style={{ animationDelay: '100ms' }}>

@@ -47,7 +47,7 @@ type Preset = {
   text: string;
   merchantName: string;
   categoryName: string;
-  Icon: React.ComponentType;
+  emoji: string;
   amount: string;
   color: string;
 };
@@ -57,7 +57,7 @@ const presetsEs: Preset[] = [
     text: "Compré café en Starbucks por 150 pesos",
     merchantName: "Starbucks",
     categoryName: "Comida y Bebida",
-    Icon: CoffeeIcon,
+    emoji: "☕",
     amount: "-$150.00",
     color: "#e8f7ee" // Soft organic green
   },
@@ -65,7 +65,7 @@ const presetsEs: Preset[] = [
     text: "Uber al aeropuerto 650 pesos",
     merchantName: "Uber",
     categoryName: "Transporte",
-    Icon: CarIcon,
+    emoji: "🚗",
     amount: "-$650.00",
     color: "#e8f7ee"
   },
@@ -73,7 +73,7 @@ const presetsEs: Preset[] = [
     text: "PlayStation Store GTA V 1200",
     merchantName: "PlayStation Store",
     categoryName: "Ocio y Entretenimiento",
-    Icon: GamepadIcon,
+    emoji: "🎮",
     amount: "-$1,200.00",
     color: "#e8f7ee"
   },
@@ -81,7 +81,7 @@ const presetsEs: Preset[] = [
     text: "Suscripción de Netflix 500 pesos",
     merchantName: "Netflix",
     categoryName: "Vivienda y Servicios",
-    Icon: TvIcon,
+    emoji: "📺",
     amount: "-$500.00",
     color: "#e8f7ee"
   }
@@ -92,7 +92,7 @@ const presetsEn: Preset[] = [
     text: "Bought coffee at Starbucks for $5",
     merchantName: "Starbucks",
     categoryName: "Food & Drink",
-    Icon: CoffeeIcon,
+    emoji: "☕",
     amount: "-$5.00",
     color: "#e8f7ee"
   },
@@ -100,7 +100,7 @@ const presetsEn: Preset[] = [
     text: "Uber to the airport $45",
     merchantName: "Uber",
     categoryName: "Transportation",
-    Icon: CarIcon,
+    emoji: "🚗",
     amount: "-$45.00",
     color: "#e8f7ee"
   },
@@ -108,7 +108,7 @@ const presetsEn: Preset[] = [
     text: "PlayStation Store GTA V $60",
     merchantName: "PlayStation Store",
     categoryName: "Entertainment & Leisure",
-    Icon: GamepadIcon,
+    emoji: "🎮",
     amount: "-$60.00",
     color: "#e8f7ee"
   },
@@ -116,7 +116,7 @@ const presetsEn: Preset[] = [
     text: "Netflix subscription $15",
     merchantName: "Netflix",
     categoryName: "Housing & Bills",
-    Icon: TvIcon,
+    emoji: "📺",
     amount: "-$15.00",
     color: "#e8f7ee"
   }
@@ -198,9 +198,9 @@ export function AiBrainSimulator({ lang }: AiBrainSimulatorProps) {
           <div className="ai-sim-card fade-in">
             <div 
               className="ai-sim-card__icon" 
-              style={{ backgroundColor: activePreset.color }}
+              style={{ backgroundColor: activePreset.color, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
-              <activePreset.Icon />
+              <span style={{ fontSize: '1.25rem' }}>{activePreset.emoji}</span>
             </div>
             <div className="ai-sim-card__details">
               <span className="ai-sim-card__merchant">{activePreset.merchantName}</span>
@@ -231,8 +231,8 @@ export function AiBrainSimulator({ lang }: AiBrainSimulatorProps) {
             onClick={() => setActiveIndex(idx)}
             disabled={isTyping}
           >
-            <span className="ai-sim-preset-btn-icon" style={{ display: 'inline-flex', alignItems: 'center' }}>
-              <preset.Icon />
+            <span className="ai-sim-preset-btn-icon" style={{ display: 'inline-flex', alignItems: 'center', fontSize: '1.15rem' }}>
+              {preset.emoji}
             </span>
             {preset.merchantName}
           </button>

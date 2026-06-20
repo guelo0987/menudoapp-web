@@ -97,7 +97,7 @@ export function AppShowcase({ lang }: AppShowcaseProps) {
   };
 
   return (
-    <section className="showcase-section">
+    <section className="showcase-section reveal-on-scroll">
       <div className="shell shell--wide">
         <div className="section-heading">
           <span className="eyebrow">{lang === 'es' ? 'Descubre la App' : 'Discover the App'}</span>

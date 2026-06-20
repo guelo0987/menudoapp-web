@@ -26,7 +26,7 @@ export function HomePage({ onNavigate, lang }: HomePageProps) {
       <AppShowcase lang={lang} />
 
       {/* Final Checklist Section */}
-      <section className="checklist-section shell fade-up">
+      <section className="checklist-section shell reveal-on-scroll">
         <div className="section-heading text-center">
           <span className="eyebrow">{lang === 'es' ? 'Características' : 'Features'}</span>
           <h2>{content.checklist.title}</h2>

@@ -65,7 +65,7 @@ export function FeatureGrid({ lang }: FeatureGridProps) {
   const content = siteContent[lang];
 
   return (
-    <section className="shell shell--wide section-stack">
+    <section className="shell shell--wide section-stack reveal-on-scroll">
       <div className="section-heading">
         <span className="eyebrow">{lang === 'es' ? 'Características' : 'Features'}</span>
         <h2>{lang === 'es' ? 'Diseñado para la vida real.' : 'Built for the real world.'}</h2>

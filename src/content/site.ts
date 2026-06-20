@@ -60,7 +60,7 @@ export const siteContent = {
       eyebrow: 'Menudo App',
       title: 'Mira tus gastos con claridad. Sin esfuerzo.',
       body: 'Escribe o habla: Menudo organiza tus finanzas de manera inteligente al instante, sincronizando de forma segura incluso cuando no tienes conexión.',
-      chips: ['Gratis', 'Fácil', 'Moderno', 'Sin Conexión'],
+      chips: ['Gratis 💸', 'Fácil ✨', 'Moderno 🥑', 'Sin Conexión 📱'],
       primaryCta: 'Descargar ahora',
       secondaryCta: 'Saber más',
     },
@@ -84,7 +84,7 @@ export const siteContent = {
     bento: [
       {
         id: 'ai-brain',
-        badge: 'Cerebro IA',
+        badge: '🧠 Cerebro IA',
         title: 'Categorización Instantánea',
         body: 'Escribe o di un gasto en lenguaje natural. Menudo procesa el texto, clasificándolo a su categoría en milisegundos con precisión absoluta.',
         gridClass: 'bento-item--span-2',
@@ -92,7 +92,7 @@ export const siteContent = {
       },
       {
         id: 'apple-pay',
-        badge: 'Automatización',
+        badge: '⚡ Automatización',
         title: 'Atajos de Apple Pay',
         body: 'Cada vez que usas Apple Pay, Menudo registra la transacción automáticamente en segundo plano.',
         gridClass: 'bento-item--span-1',
@@ -100,7 +100,7 @@ export const siteContent = {
       },
       {
         id: 'offline-first',
-        badge: 'Sin Conexión',
+        badge: '📶 Sin Conexión',
         title: 'Sincronización Inteligente',
         body: 'Registra tus gastos sin señal. Tus cambios se guardan en tu dispositivo y se fusionan de forma segura en la nube tan pronto recuperes tu conexión.',
         gridClass: 'bento-item--span-1',
@@ -108,7 +108,7 @@ export const siteContent = {
       },
       {
         id: 'shared-lists',
-        badge: 'Colaboración',
+        badge: '👥 Colaboración',
         title: 'Presupuestos Compartidos',
         body: 'Gestiona presupuestos compartidos con tu pareja o familia sin conflictos. Los saldos y límites se actualizan de forma segura y en tiempo real para todos.',
         gridClass: 'bento-item--span-2',
@@ -116,7 +116,7 @@ export const siteContent = {
       },
       {
         id: 'premium',
-        badge: 'Premium',
+        badge: '💎 Premium',
         title: 'Suscripción Premium',
         body: 'Desbloquea presupuestos ilimitados, categorías avanzadas e historial completo con total seguridad.',
         gridClass: 'bento-item--span-3',
@@ -224,7 +224,7 @@ export const siteContent = {
       eyebrow: 'Menudo App',
       title: 'See your spending clearly. Effortlessly.',
       body: 'Type or speak: Menudo organizes your finances intelligently and instantly, syncing securely even when you are offline.',
-      chips: ['Free to try', 'Easy to use', 'Modern design', 'Offline Mode'],
+      chips: ['Free to try 💸', 'Easy to use ✨', 'Modern design 🥑', 'Offline Mode 📱'],
       primaryCta: 'Download now',
       secondaryCta: 'Learn more',
     },
@@ -248,7 +248,7 @@ export const siteContent = {
     bento: [
       {
         id: 'ai-brain',
-        badge: 'AI Brain',
+        badge: '🧠 AI Brain',
         title: 'Instant Categorization',
         body: 'Type or say an expense in plain language. Menudo processes the text, classifying it into its category in milliseconds with absolute precision.',
         gridClass: 'bento-item--span-2',
@@ -256,7 +256,7 @@ export const siteContent = {
       },
       {
         id: 'apple-pay',
-        badge: 'Automation',
+        badge: '⚡ Automation',
         title: 'Apple Pay Shortcuts',
         body: 'Every time you use Apple Pay, Menudo registers the transaction automatically in the background.',
         gridClass: 'bento-item--span-1',
@@ -264,7 +264,7 @@ export const siteContent = {
       },
       {
         id: 'offline-first',
-        badge: 'Offline Mode',
+        badge: '📶 Offline Mode',
         title: 'Smart Synchronization',
         body: 'Log expenses without signal. Your changes are stored on your device and merged securely into the cloud as soon as you reconnect.',
         gridClass: 'bento-item--span-1',
@@ -272,7 +272,7 @@ export const siteContent = {
       },
       {
         id: 'shared-lists',
-        badge: 'Collaboration',
+        badge: '👥 Collaboration',
         title: 'Shared Budgets',
         body: 'Manage shared budgets with your partner or family without conflicts. Balances and limits are updated securely and in real-time for everyone.',
         gridClass: 'bento-item--span-2',
@@ -280,7 +280,7 @@ export const siteContent = {
       },
       {
         id: 'premium',
-        badge: 'Premium',
+        badge: '💎 Premium',
         title: 'Premium Subscription',
         body: 'Unlock unlimited budgets, advanced categories, and complete history securely.',
         gridClass: 'bento-item--span-3',
