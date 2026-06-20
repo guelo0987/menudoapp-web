@@ -5,40 +5,41 @@
   --bg: #ffffff;
   --bg-gradient: none;
   
-  --surface: #f5f5f7; /* Apple's light-grey surface */
-  --surface-hover: #e8e8ed;
+  --surface: #ffffff; 
+  --surface-hover: #f8fbf7;
   --surface-strong: #ffffff;
   
   /* Primary & Accent Colors */
-  --primary: #1d1d1f; /* Apple Black */
-  --primary-glow: rgba(29, 29, 31, 0.08);
+  --primary: #101510; /* Organic Carbon Black */
+  --primary-glow: rgba(16, 21, 16, 0.05);
   --primary-gradient: none;
   
-  --accent: #006644; /* Clean Premium Forest Emerald */
-  --accent-glow: rgba(0, 102, 68, 0.1);
+  --accent: #1f7c4b; /* Legible Dark Avocado Green */
+  --accent-light: #67C98C; /* Vibrant Seed Avocado Green */
+  --accent-glow: rgba(103, 201, 140, 0.12);
   --accent-gradient: none;
   
   /* Text colors */
-  --text: #1d1d1f; /* Pure deep charcoal */
-  --text-muted: #86868b; /* Apple standard subtext grey */
-  --text-dim: #a1a1a6;
+  --text: #101510; /* Legible organic dark gray/green */
+  --text-muted: #5e685f; /* Organic slate gray */
+  --text-dim: #acb6ae; /* Pale green-gray */
   
   /* Borders and Glass */
-  --border: #e5e7eb; /* Soft boundary */
-  --border-hover: #d2d2d7;
-  --border-accent: rgba(0, 102, 68, 0.2);
+  --border: #e2e8e3; /* Soft border with green tint */
+  --border-hover: #b4c9b8; /* Muted avocado border on hover */
+  --border-accent: rgba(31, 124, 75, 0.25);
   --glass-blur: none;
   
   /* Clean minimalist shadows */
-  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.04);
+  --shadow-soft: 0 8px 30px rgba(16, 21, 16, 0.03);
   --shadow-glow: none;
   
   /* Border Radii (Apple styled) */
-  --radius-2xl: 28px;
-  --radius-xl: 20px;
-  --radius-lg: 14px;
-  --radius-md: 10px;
-  --radius-sm: 6px;
+  --radius-2xl: 24px;
+  --radius-xl: 18px;
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --radius-sm: 4px;
   
   /* Width Shells */
   --shell-wide: min(1160px, calc(100vw - 48px));

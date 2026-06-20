@@ -9,7 +9,7 @@ type AnimatedBenefitsProps = {
 function FrictionlessLoggingWidget({ lang }: { lang: Language }) {
   const [step, setStep] = useState(0); // 0: typing, 1: show card
   const [text, setText] = useState('');
-  const target = lang === 'es' ? 'Gasolina $350' : 'Gasoline $45';
+  const target = lang === 'es' ? 'Café con leche 120 pesos' : 'Coffee at Starbucks $5';
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -22,15 +22,15 @@ function FrictionlessLoggingWidget({ lang }: { lang: Language }) {
           idx++;
         } else {
           clearInterval(interval);
-          timer = setTimeout(() => setStep(1), 800);
+          timer = setTimeout(() => setStep(1), 1000);
         }
-      }, 80);
+      }, 70);
       return () => clearInterval(interval);
     } else {
       // Hold card, then loop back
       timer = setTimeout(() => {
         setStep(0);
-      }, 4000);
+      }, 3500);
     }
     return () => clearTimeout(timer);
   }, [step, lang]);
@@ -46,17 +46,17 @@ function FrictionlessLoggingWidget({ lang }: { lang: Language }) {
           </div>
         ) : (
           <div className="logging-card-box fade-in">
-            <div className="logging-card-icon">🚗</div>
+            <div className="logging-card-icon">☕</div>
             <div className="logging-card-info">
               <span className="logging-card-title">
-                {lang === 'es' ? 'Transporte' : 'Transport'}
+                {lang === 'es' ? 'Comida y Bebida' : 'Food & Drink'}
               </span>
               <span className="logging-card-sub">
-                {lang === 'es' ? 'Gasolina' : 'Gasoline'}
+                {lang === 'es' ? 'Starbucks' : 'Starbucks'}
               </span>
             </div>
             <div className="logging-card-amount">
-              {lang === 'es' ? '-$350.00' : '-$45.00'}
+              {lang === 'es' ? '-$120.00' : '-$5.00'}
             </div>
           </div>
         )}
@@ -75,7 +75,7 @@ function HabitBuilderWidget({ lang }: { lang: Language }) {
         if (prev >= 12) return 0; // Reset streak
         return prev + 1;
       });
-    }, 400); // Check a day every 400ms
+    }, 4500 / 12); // Loop complete cycle in 4.5s
     return () => clearInterval(interval);
   }, []);
 
@@ -103,25 +103,48 @@ function HabitBuilderWidget({ lang }: { lang: Language }) {
   );
 }
 
-// Widget 3: Full Picture (Bar chart animations)
+// Widget 3: Full Picture (Bar chart animations with brand avocado colors & categories)
 function FullPictureWidget({ lang }: { lang: Language }) {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    // Loop animation: grow for 4s, reset, repeat
     setAnimate(true);
     const interval = setInterval(() => {
       setAnimate(false);
-      setTimeout(() => setAnimate(true), 100);
+      setTimeout(() => setAnimate(true), 150);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   const bars = [
-    { emoji: '🥑', label: '79.95', height: '90%', color: '#ecfdf5' },
-    { emoji: '🚗', label: '67.00', height: '75%', color: '#f0f9ff' },
-    { emoji: '🍔', label: '32.00', height: '48%', color: '#fffbeb' },
-    { emoji: '💎', label: '15.00', height: '28%', color: '#eef2ff' }
+    { 
+      emoji: '🍔', 
+      name: lang === 'es' ? 'Comida' : 'Food', 
+      amount: lang === 'es' ? '$4,200' : '$420', 
+      height: '92%', 
+      color: 'var(--accent)' 
+    },
+    { 
+      emoji: '🚗', 
+      name: lang === 'es' ? 'Transp.' : 'Transp.', 
+      amount: lang === 'es' ? '$2,800' : '$280', 
+      height: '72%', 
+      color: '#4fa972' 
+    },
+    { 
+      emoji: '🏠', 
+      name: lang === 'es' ? 'Vivienda' : 'Bills', 
+      amount: lang === 'es' ? '$1,800' : '$180', 
+      height: '52%', 
+      color: 'var(--accent-light)' 
+    },
+    { 
+      emoji: '🎮', 
+      name: lang === 'es' ? 'Ocio' : 'Leisure', 
+      amount: lang === 'es' ? '$900' : '$90', 
+      height: '32%', 
+      color: '#a8e6cf' 
+    }
   ];
 
   return (
@@ -129,15 +152,19 @@ function FullPictureWidget({ lang }: { lang: Language }) {
       <div className="chart-container">
         {bars.map((bar, idx) => (
           <div key={idx} className="chart-col">
-            <div 
-              className="chart-bar" 
-              style={{ 
-                height: animate ? bar.height : '0%',
-                transitionDelay: `${idx * 100}ms`
-              }}
-            >
+            <div className="chart-bar-track">
+              <div 
+                className="chart-bar-fill" 
+                style={{ 
+                  height: animate ? bar.height : '0%',
+                  backgroundColor: bar.color,
+                  transitionDelay: `${idx * 100}ms`
+                }}
+              />
+            </div>
+            <div className="chart-meta">
               <span className="chart-emoji">{bar.emoji}</span>
-              <span className="chart-label">${bar.label}</span>
+              <span className="chart-label">{bar.amount}</span>
             </div>
           </div>
         ))}

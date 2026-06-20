@@ -15,11 +15,11 @@ const presetsEs: Preset[] = [
   {
     text: "Compré café en Starbucks por 150 pesos",
     merchantName: "Starbucks",
-    categoryName: "Comida & Bebida",
+    categoryName: "Comida y Bebida",
     emoji: "☕",
     amount: "-$150.00",
     latency: "11.4ms",
-    color: "#fef3c7" // Warm pastel orange/brown
+    color: "#e8f7ee" // Soft organic green
   },
   {
     text: "Uber al aeropuerto 650 pesos",
@@ -28,25 +28,25 @@ const presetsEs: Preset[] = [
     emoji: "🚗",
     amount: "-$650.00",
     latency: "12.8ms",
-    color: "#e0f2fe" // Pastel blue
+    color: "#e0f4f0" // Soft sage
   },
   {
     text: "PlayStation Store GTA V 1200",
     merchantName: "PlayStation Store",
-    categoryName: "Juegos & Entretenimiento",
+    categoryName: "Ocio y Entretenimiento",
     emoji: "🎮",
     amount: "-$1,200.00",
     latency: "10.9ms",
-    color: "#e0e7ff" // Pastel indigo
+    color: "#eaf3eb" // Soft mint
   },
   {
     text: "Suscripción de Netflix 500 pesos",
     merchantName: "Netflix",
-    categoryName: "Suscripciones",
+    categoryName: "Vivienda y Servicios",
     emoji: "📺",
     amount: "-$500.00",
     latency: "13.2ms",
-    color: "#fee2e2" // Pastel red
+    color: "#f3f7f4" // Soft light avocado
   }
 ];
 
@@ -58,34 +58,34 @@ const presetsEn: Preset[] = [
     emoji: "☕",
     amount: "-$5.00",
     latency: "12.1ms",
-    color: "#fef3c7"
+    color: "#e8f7ee"
   },
   {
     text: "Uber to the airport $45",
     merchantName: "Uber",
-    categoryName: "Transport",
+    categoryName: "Transportation",
     emoji: "🚗",
     amount: "-$45.00",
     latency: "11.9ms",
-    color: "#e0f2fe"
+    color: "#e0f4f0"
   },
   {
     text: "PlayStation Store GTA V $60",
     merchantName: "PlayStation Store",
-    categoryName: "Games & Entertainment",
+    categoryName: "Entertainment & Leisure",
     emoji: "🎮",
     amount: "-$60.00",
     latency: "11.2ms",
-    color: "#e0e7ff"
+    color: "#eaf3eb"
   },
   {
     text: "Netflix subscription $15",
     merchantName: "Netflix",
-    categoryName: "Subscriptions",
+    categoryName: "Housing & Bills",
     emoji: "📺",
     amount: "-$15.00",
     latency: "13.5ms",
-    color: "#fee2e2"
+    color: "#f3f7f4"
   }
 ];
 
@@ -150,11 +150,11 @@ export function AiBrainSimulator({ lang }: AiBrainSimulatorProps) {
       <div className="ai-sim-indicator">
         {isTyping ? (
           <span className="ai-sim-status ai-sim-status--processing">
-            {lang === 'es' ? 'Procesando con Groq LPU...' : 'Processing with Groq LPU...'}
+            {lang === 'es' ? 'Organizando tu gasto...' : 'Organizing your expense...'}
           </span>
         ) : (
           <span className="ai-sim-status ai-sim-status--done">
-            ⚡ {lang === 'es' ? 'Categorizado instantáneo' : 'Instant categorized'}
+            ⚡ {lang === 'es' ? 'Categorizado al instante' : 'Categorized instantly'}
           </span>
         )}
       </div>
@@ -192,7 +192,7 @@ export function AiBrainSimulator({ lang }: AiBrainSimulatorProps) {
       {/* Latency subtext */}
       {showResult && (
         <span className="ai-sim-latency-badge fade-in">
-          {lang === 'es' ? 'Respuesta en ' : 'Response in '}
+          {lang === 'es' ? 'Clasificado en ' : 'Classified in '}
           <strong>{activePreset.latency}</strong>
         </span>
       )}
