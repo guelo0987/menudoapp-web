@@ -90,5 +90,17 @@
       "Instant real-time synchronization of transaction deletions via swipe on Dashboard and Category Details.",
       "Increased AI parsing timeout to 10 seconds to tolerate serverless cold start latencies."
     ]
+  },
+  "1.0.0+21": {
+    "es": [
+      "Añadimos un tutorial visual no intrusivo en el Dashboard para descubrir cómo configurar cobros y suscripciones recurrentes.",
+      "Las etiquetas al editar transacciones recurrentes ahora se adaptan a 'Próxima Ejecución' / 'Siguiente Registro' calculando la fecha futura automática.",
+      "Integramos telemetría avanzada de notificaciones de extremo a extremo para garantizar que los recordatorios lleguen correctamente a tu dispositivo."
+    ],
+    "en": [
+      "Added a non-intrusive visual tutorial card on the Dashboard to discover and configure recurring transactions.",
+      "Labels when editing recurring transactions now adapt dynamically to 'Next Execution' with auto-calculated future dates.",
+      "Integrated advanced end-to-end push notification telemetry to verify reminders reach your device successfully."
+    ]
   }
 }
