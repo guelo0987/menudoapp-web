@@ -1,6 +1,6 @@
 import { FeatureGrid } from '../components/FeatureGrid';
 import { HomeHero } from '../components/HomeHero';
-import { InfoSection } from '../components/InfoSection';
+import { AppShowcase } from '../components/AppShowcase';
 import { siteContent, Language } from '../content/site';
 
 type HomePageProps = {
@@ -15,13 +15,11 @@ export function HomePage({ onNavigate, lang }: HomePageProps) {
     <main>
       <HomeHero onNavigate={onNavigate} lang={lang} />
       
-      {/* 3-Column Benefits */}
+      {/* Bento Grid Features */}
       <FeatureGrid lang={lang} />
 
-      {/* Alternating Info Sections */}
-      {content.infoSections.map((section) => (
-        <InfoSection key={section.title} {...section} />
-      ))}
+      {/* App Screenshots Carousel */}
+      <AppShowcase lang={lang} />
 
       {/* Final Checklist Section */}
       <section className="checklist-section shell fade-up">
@@ -43,7 +41,7 @@ export function HomePage({ onNavigate, lang }: HomePageProps) {
       </section>
       
       {/* Floating Action Button */}
-      <a href="/support" className="fab-button bounce">
+      <a href="/support" className="fab-button bounce" onClick={(e) => { e.preventDefault(); onNavigate('/support'); }}>
         {lang === 'es' ? 'Probar Gratis' : 'Try for Free'}
       </a>
     </main>

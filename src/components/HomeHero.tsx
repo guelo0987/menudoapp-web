@@ -36,7 +36,6 @@ export function HomeHero({ onNavigate, lang }: HomeHeroProps) {
         <img
           src={siteContent.heroShared.spotlightImage}
           alt={siteContent.heroShared.spotlightLabel}
-          className="hero__main-image"
         />
       </div>
     </section>

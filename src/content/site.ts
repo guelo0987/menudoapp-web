@@ -47,7 +47,7 @@ export const siteContent = {
   },
   heroShared: {
     spotlightLabel: 'Dashboard',
-    spotlightImage: '/placeholders/nuevobannerok.png',
+    spotlightImage: '/app-screenshots/hero_shots_so.png',
   },
   es: {
     nav: [
@@ -59,8 +59,8 @@ export const siteContent = {
     hero: {
       eyebrow: 'Menudo App',
       title: 'Mira tus gastos con claridad. Sin esfuerzo.',
-      body: 'Escribe, habla o automatiza: Menudo organiza tus finanzas para que tú no tengas que pensar en ello.',
-      chips: ['Gratis', 'Fácil', 'Moderno'],
+      body: 'Escribe o habla: Menudo organiza tus finanzas de manera inteligente al instante, sincronizando de forma segura incluso cuando no tienes conexión.',
+      chips: ['Gratis', 'Fácil', 'Moderno', 'Sin Conexión'],
       primaryCta: 'Descargar ahora',
       secondaryCta: 'Saber más',
     },
@@ -68,35 +68,77 @@ export const siteContent = {
       {
         title: 'Registra sin fricción',
         body: 'Escribe una nota, habla naturalmente o deja que las automatizaciones lo hagan por ti.',
-        image: '/Gemini_Generated_Image_i689bii689bii689.png',
+        image: '/app-screenshots/hero_shots_so.png',
       },
       {
         title: 'Crea el hábito',
         body: 'Cuando registrar toma segundos, realmente lo haces. La consistencia se vuelve natural.',
-        image: '/Gemini_Generated_Image_f7axcpf7axcpf7ax.png',
+        image: '/app-screenshots/526shots_so.png',
       },
       {
         title: 'Visión completa',
         body: 'Entiende tus patrones con gráficos automáticos que te dicen la verdad de tu dinero.',
-        image: '/Gemini_Generated_Image_xvlbkjxvlbkjxvlb.png',
+        image: '/app-screenshots/59shots_so.png',
       },
     ] satisfies BenefitCard[],
+    bento: [
+      {
+        id: 'ai-brain',
+        badge: 'Cerebro IA',
+        title: 'Categorización Instantánea',
+        body: 'Escribe o di un gasto en lenguaje natural. Menudo procesa el texto, clasificándolo a su categoría en milisegundos con precisión absoluta.',
+        gridClass: 'bento-item--span-2',
+        visualType: 'ai-sim'
+      },
+      {
+        id: 'apple-pay',
+        badge: 'Automatización',
+        title: 'Atajos de Apple Pay',
+        body: 'Cada vez que usas Apple Pay, Menudo registra la transacción automáticamente en segundo plano.',
+        gridClass: 'bento-item--span-1',
+        visualType: 'shortcuts'
+      },
+      {
+        id: 'offline-first',
+        badge: 'Sin Conexión',
+        title: 'Sincronización Inteligente',
+        body: 'Registra tus gastos sin señal. Tus cambios se guardan en tu dispositivo y se fusionan de forma segura en la nube tan pronto recuperes tu conexión.',
+        gridClass: 'bento-item--span-1',
+        visualType: 'offline-first'
+      },
+      {
+        id: 'shared-lists',
+        badge: 'Colaboración',
+        title: 'Presupuestos Compartidos',
+        body: 'Gestiona presupuestos compartidos con tu pareja o familia sin conflictos. Los saldos y límites se actualizan de forma segura y en tiempo real para todos.',
+        gridClass: 'bento-item--span-2',
+        visualType: 'shared-lists'
+      },
+      {
+        id: 'premium',
+        badge: 'Premium',
+        title: 'Suscripción Premium',
+        body: 'Desbloquea presupuestos ilimitados, categorías avanzadas e historial completo con total seguridad.',
+        gridClass: 'bento-item--span-3',
+        visualType: 'paywall'
+      }
+    ],
     infoSections: [
       {
         eyebrow: 'Automatización',
         title: 'Paga con Apple Pay. Registra solo.',
-        body: 'Cada vez que usas Apple Pay, Menudo registra el gasto automáticamente mediante Atajos de iOS.',
-        image: '/placeholders/feature-home.svg',
+        body: 'Cada vez que usas Apple Pay, Menudo registra el gasto automáticamente mediante atajos inteligentes.',
+        image: '/app-screenshots/823shots_so.png',
         imagePosition: 'right',
-        items: ['Post-pago instantáneo', 'Cero esfuerzo', 'Atajos de Apple™'],
+        items: ['Post-pago instantáneo', 'Cero esfuerzo', 'Atajos nativos'],
       },
       {
         eyebrow: 'Reportes Detallados',
         title: 'Tus finanzas contadas con gráficos.',
-        body: 'Visualiza a dónde va cada centavo con reportes automáticos generados por tu backend.',
-        image: '/Gemini_Generated_Image_a3ycc6a3ycc6a3yc.png',
+        body: 'Visualiza a dónde va cada centavo con reportes automáticos en tiempo real.',
+        image: '/app-screenshots/59shots_so.png',
         imagePosition: 'left',
-        items: ['Gráficos de barras', 'Categorización mensual', 'Balance en tiempo real'],
+        items: ['Gráficos sencillos', 'Categorización mensual', 'Balance en tiempo real'],
       },
     ] satisfies InfoSection[],
     checklist: {
@@ -181,8 +223,8 @@ export const siteContent = {
     hero: {
       eyebrow: 'Menudo App',
       title: 'See your spending clearly. Effortlessly.',
-      body: 'Type, speak, or automate: Menudo organizes your finances so you don’t have to think about it.',
-      chips: ['Free to try', 'Easy to use', 'Modern design'],
+      body: 'Type or speak: Menudo organizes your finances intelligently and instantly, syncing securely even when you are offline.',
+      chips: ['Free to try', 'Easy to use', 'Modern design', 'Offline Mode'],
       primaryCta: 'Download now',
       secondaryCta: 'Learn more',
     },
@@ -190,35 +232,77 @@ export const siteContent = {
       {
         title: 'Frictionless Logging',
         body: 'Type a note, speak naturally, or let automations do it for you.',
-        image: '/Gemini_Generated_Image_i689bii689bii689.png',
+        image: '/app-screenshots/hero_shots_so.png',
       },
       {
         title: 'Build the habit',
         body: 'When tracking takes seconds, you actually do it. Consistency becomes natural.',
-        image: '/Gemini_Generated_Image_f7axcpf7axcpf7ax.png',
+        image: '/app-screenshots/526shots_so.png',
       },
       {
         title: 'See the full picture',
         body: 'Understand your patterns with automatic charts that tell you the truth about your money.',
-        image: '/Gemini_Generated_Image_xvlbkjxvlbkjxvlb.png',
+        image: '/app-screenshots/59shots_so.png',
       },
     ] satisfies BenefitCard[],
+    bento: [
+      {
+        id: 'ai-brain',
+        badge: 'AI Brain',
+        title: 'Instant Categorization',
+        body: 'Type or say an expense in plain language. Menudo processes the text, classifying it into its category in milliseconds with absolute precision.',
+        gridClass: 'bento-item--span-2',
+        visualType: 'ai-sim'
+      },
+      {
+        id: 'apple-pay',
+        badge: 'Automation',
+        title: 'Apple Pay Shortcuts',
+        body: 'Every time you use Apple Pay, Menudo registers the transaction automatically in the background.',
+        gridClass: 'bento-item--span-1',
+        visualType: 'shortcuts'
+      },
+      {
+        id: 'offline-first',
+        badge: 'Offline Mode',
+        title: 'Smart Synchronization',
+        body: 'Log expenses without signal. Your changes are stored on your device and merged securely into the cloud as soon as you reconnect.',
+        gridClass: 'bento-item--span-1',
+        visualType: 'offline-first'
+      },
+      {
+        id: 'shared-lists',
+        badge: 'Collaboration',
+        title: 'Shared Budgets',
+        body: 'Manage shared budgets with your partner or family without conflicts. Balances and limits are updated securely and in real-time for everyone.',
+        gridClass: 'bento-item--span-2',
+        visualType: 'shared-lists'
+      },
+      {
+        id: 'premium',
+        badge: 'Premium',
+        title: 'Premium Subscription',
+        body: 'Unlock unlimited budgets, advanced categories, and complete history securely.',
+        gridClass: 'bento-item--span-3',
+        visualType: 'paywall'
+      }
+    ],
     infoSections: [
       {
         eyebrow: 'Automation',
         title: 'Pay with Apple Pay. Log automatically.',
-        body: 'Every time you tap to pay, Menudo automatically logs your expense via iOS Shortcuts.',
-        image: '/placeholders/feature-home.svg',
+        body: 'Every time you tap to pay, Menudo automatically logs your expense via native shortcuts.',
+        image: '/app-screenshots/823shots_so.png',
         imagePosition: 'right',
-        items: ['Instant post-payment', 'Zero effort tracking', 'Works with Apple Shortcuts™'],
+        items: ['Instant post-payment', 'Zero effort tracking', 'Native Shortcuts'],
       },
       {
         eyebrow: 'Detailed Reports',
         title: 'Your finances, told with charts.',
-        body: 'Visualize where every cent goes with automatic reports generated by your backend.',
-        image: '/Gemini_Generated_Image_a3ycc6a3ycc6a3yc.png',
+        body: 'Visualize where every cent goes with automatic reports in real-time.',
+        image: '/app-screenshots/59shots_so.png',
         imagePosition: 'left',
-        items: ['Bar charts', 'Monthly categorization', 'Real-time balance'],
+        items: ['Simple charts', 'Monthly categorization', 'Real-time balance'],
       },
     ] satisfies InfoSection[],
     checklist: {
