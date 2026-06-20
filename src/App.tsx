@@ -7,6 +7,7 @@ import { AuthConfirmPage } from './pages/AuthConfirmPage';
 import { HomePage } from './pages/HomePage';
 import { ResetPasswordPage } from './pages/ResetPasswordPage';
 import { InvitationJoinPage } from './pages/InvitationJoinPage';
+import { SupportPage } from './pages/SupportPage';
 
 function normalizePath(pathname: string): RouteKey {
   const path = pathname.endsWith('/') && pathname !== '/'
@@ -43,7 +44,7 @@ export default function App() {
 
   useEffect(() => {
     const metadata = (pageMetadata as any)[lang][path];
-    const fullTitle = `${metadata.title} — ${siteContent.brand.name}`;
+    const fullTitle = `${metadata.title} | ${siteContent.brand.name}`;
     document.title = fullTitle;
 
     const descMeta = document.querySelector('meta[name="description"]');
@@ -77,6 +78,8 @@ export default function App() {
         return <LegalPage title={(content as any).privacyPolicy?.title || 'Privacy'} intro={(content as any).privacyPolicy?.intro || ''} sections={(content as any).privacyPolicy?.sections || []} onNavigate={handleNavigate} />;
       case '/terms':
         return <LegalPage title={(content as any).terms?.title || 'Terms'} intro={(content as any).terms?.intro || ''} sections={(content as any).terms?.sections || []} onNavigate={handleNavigate} />;
+      case '/support':
+        return <SupportPage lang={lang} onNavigate={handleNavigate} />;
       case '/auth/confirm':
         return <AuthConfirmPage lang={lang} onNavigate={handleNavigate} />;
       case '/auth/reset-password':
@@ -91,8 +94,6 @@ export default function App() {
 
   return (
     <div className="site-root">
-      <div className="ambient ambient--left" />
-      <div className="ambient ambient--right" />
       <SiteHeader currentPath={path} onNavigate={handleNavigate} lang={lang} setLang={setLang} />
       {page}
       <SiteFooter onNavigate={handleNavigate} lang={lang} />

@@ -381,7 +381,7 @@ export const siteContent = {
 
 export const pageMetadata = {
   es: {
-    '/': { title: 'Menudo — Finanzas Claros', description: 'Toma el control de tu dinero.' },
+    '/': { title: 'Menudo | Finanzas Claras', description: 'Toma el control de tu dinero.' },
     '/privacy-policy': { title: 'Privacidad', description: 'Cómo protegemos tus datos.' },
     '/terms': { title: 'Términos', description: 'Condiciones de uso.' },
     '/support': { title: 'Soporte', description: 'Ayuda con Menudo.' },
@@ -391,7 +391,7 @@ export const pageMetadata = {
     '/invitations/join': { title: 'Invitación a lista compartida', description: 'Únete a una lista compartida en Menudo.' },
   },
   en: {
-    '/': { title: 'Menudo — Clear Finance', description: 'Take control of your money.' },
+    '/': { title: 'Menudo | Clear Finance', description: 'Take control of your money.' },
     '/privacy-policy': { title: 'Privacy', description: 'How we protect your data.' },
     '/terms': { title: 'Terms', description: 'Terms of service.' },
     '/support': { title: 'Support', description: 'Help with Menudo.' },

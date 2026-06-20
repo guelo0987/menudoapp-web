@@ -46,7 +46,7 @@ export function HomePage({ onNavigate, lang }: HomePageProps) {
       
       {/* Floating Action Button */}
       <a href="/support" className="fab-button bounce" onClick={(e) => { e.preventDefault(); onNavigate('/support'); }}>
-        {lang === 'es' ? 'Probar Gratis' : 'Try for Free'}
+        {lang === 'es' ? 'Descargar' : 'Download'}
       </a>
     </main>
   );

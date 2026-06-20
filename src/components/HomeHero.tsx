@@ -6,6 +6,24 @@ type HomeHeroProps = {
   lang: Language;
 };
 
+const ChevronRightIcon = () => (
+  <span style={{
+    width: 20,
+    height: 20,
+    borderRadius: '50%',
+    background: 'rgba(255, 255, 255, 0.15)',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 8,
+    flexShrink: 0
+  }}>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 10, height: 10 }}>
+      <polyline points="9 18 15 12 9 6" />
+    </svg>
+  </span>
+);
+
 export function HomeHero({ onNavigate, lang }: HomeHeroProps) {
   const content = siteContent[lang].hero;
 
@@ -24,7 +42,8 @@ export function HomeHero({ onNavigate, lang }: HomeHeroProps) {
 
         <div className="hero__actions">
           <LinkButton href="/support" onNavigate={onNavigate}>
-            {content.primaryCta}
+            <span>{content.primaryCta}</span>
+            <ChevronRightIcon />
           </LinkButton>
           <LinkButton href="/privacy-policy" variant="secondary" onNavigate={onNavigate}>
             {content.secondaryCta}
@@ -33,10 +52,17 @@ export function HomeHero({ onNavigate, lang }: HomeHeroProps) {
       </div>
 
       <div className="hero__visual fade-up">
-        <img
-          src={siteContent.heroShared.spotlightImage}
-          alt={siteContent.heroShared.spotlightLabel}
-        />
+        <div className="dashboard-mockup-frame">
+          <div className="dashboard-mockup-frame__header">
+            <div className="dashboard-mockup-frame__dot" />
+            <div className="dashboard-mockup-frame__dot" />
+            <div className="dashboard-mockup-frame__dot" />
+          </div>
+          <img
+            src={siteContent.heroShared.spotlightImage}
+            alt={siteContent.heroShared.spotlightLabel}
+          />
+        </div>
       </div>
     </section>
   );

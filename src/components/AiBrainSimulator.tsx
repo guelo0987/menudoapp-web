@@ -1,13 +1,54 @@
 import { useState, useEffect } from 'react';
 import { Language } from '../content/site';
 
+const CoffeeIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 18, height: 18 }}>
+    <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
+    <line x1="6" y1="2" x2="6" y2="4" />
+    <line x1="10" y1="2" x2="10" y2="4" />
+    <line x1="14" y1="2" x2="14" y2="4" />
+  </svg>
+);
+
+const CarIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 18, height: 18 }}>
+    <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+    <circle cx="7" cy="17" r="2" />
+    <path d="M9 17h6" />
+    <circle cx="17" cy="17" r="2" />
+  </svg>
+);
+
+const GamepadIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 18, height: 18 }}>
+    <line x1="6" y1="12" x2="10" y2="12" />
+    <line x1="8" y1="10" x2="8" y2="14" />
+    <line x1="15" y1="13" x2="15.01" y2="13" />
+    <line x1="18" y1="11" x2="18.01" y2="11" />
+    <rect x="2" y="6" width="20" height="12" rx="3" />
+  </svg>
+);
+
+const TvIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 18, height: 18 }}>
+    <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
+    <polyline points="17 2 12 7 7 2" />
+  </svg>
+);
+
+const BoltIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: 14, height: 14, display: 'inline-block', marginRight: 4, verticalAlign: 'middle' }}>
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+  </svg>
+);
+
 type Preset = {
   text: string;
   merchantName: string;
   categoryName: string;
-  emoji: string;
+  Icon: React.ComponentType;
   amount: string;
-  latency: string;
   color: string;
 };
 
@@ -16,37 +57,33 @@ const presetsEs: Preset[] = [
     text: "Compré café en Starbucks por 150 pesos",
     merchantName: "Starbucks",
     categoryName: "Comida y Bebida",
-    emoji: "☕",
+    Icon: CoffeeIcon,
     amount: "-$150.00",
-    latency: "11.4ms",
     color: "#e8f7ee" // Soft organic green
   },
   {
     text: "Uber al aeropuerto 650 pesos",
     merchantName: "Uber",
     categoryName: "Transporte",
-    emoji: "🚗",
+    Icon: CarIcon,
     amount: "-$650.00",
-    latency: "12.8ms",
-    color: "#e0f4f0" // Soft sage
+    color: "#e8f7ee"
   },
   {
     text: "PlayStation Store GTA V 1200",
     merchantName: "PlayStation Store",
     categoryName: "Ocio y Entretenimiento",
-    emoji: "🎮",
+    Icon: GamepadIcon,
     amount: "-$1,200.00",
-    latency: "10.9ms",
-    color: "#eaf3eb" // Soft mint
+    color: "#e8f7ee"
   },
   {
     text: "Suscripción de Netflix 500 pesos",
     merchantName: "Netflix",
     categoryName: "Vivienda y Servicios",
-    emoji: "📺",
+    Icon: TvIcon,
     amount: "-$500.00",
-    latency: "13.2ms",
-    color: "#f3f7f4" // Soft light avocado
+    color: "#e8f7ee"
   }
 ];
 
@@ -55,37 +92,33 @@ const presetsEn: Preset[] = [
     text: "Bought coffee at Starbucks for $5",
     merchantName: "Starbucks",
     categoryName: "Food & Drink",
-    emoji: "☕",
+    Icon: CoffeeIcon,
     amount: "-$5.00",
-    latency: "12.1ms",
     color: "#e8f7ee"
   },
   {
     text: "Uber to the airport $45",
     merchantName: "Uber",
     categoryName: "Transportation",
-    emoji: "🚗",
+    Icon: CarIcon,
     amount: "-$45.00",
-    latency: "11.9ms",
-    color: "#e0f4f0"
+    color: "#e8f7ee"
   },
   {
     text: "PlayStation Store GTA V $60",
     merchantName: "PlayStation Store",
     categoryName: "Entertainment & Leisure",
-    emoji: "🎮",
+    Icon: GamepadIcon,
     amount: "-$60.00",
-    latency: "11.2ms",
-    color: "#eaf3eb"
+    color: "#e8f7ee"
   },
   {
     text: "Netflix subscription $15",
     merchantName: "Netflix",
     categoryName: "Housing & Bills",
-    emoji: "📺",
+    Icon: TvIcon,
     amount: "-$15.00",
-    latency: "13.5ms",
-    color: "#f3f7f4"
+    color: "#e8f7ee"
   }
 ];
 
@@ -119,7 +152,7 @@ export function AiBrainSimulator({ lang }: AiBrainSimulatorProps) {
           setShowResult(true);
         }, 200);
       }
-    }, 30);
+    }, 35);
 
     return () => clearInterval(typingInterval);
   }, [activeIndex, lang]);
@@ -130,7 +163,7 @@ export function AiBrainSimulator({ lang }: AiBrainSimulatorProps) {
     if (showResult && !isTyping) {
       const holdTimer = setTimeout(() => {
         setActiveIndex((prev) => (prev + 1) % presets.length);
-      }, 4500); // Hold for 4.5s before moving to next preset
+      }, 4500);
       return () => clearTimeout(holdTimer);
     }
   }, [showResult, isTyping, presets.length]);
@@ -139,7 +172,7 @@ export function AiBrainSimulator({ lang }: AiBrainSimulatorProps) {
     <div className="ai-sim-widget">
       {/* Input Message Bubble */}
       <div className="ai-sim-input-bubble">
-        <span className="ai-sim-input-label">{lang === 'es' ? 'Tu dices:' : 'You say:'}</span>
+        <span className="ai-sim-input-label">{lang === 'es' ? 'Tú dices:' : 'You say:'}</span>
         <p className="ai-sim-input-text">
           "{typedText}"
           {isTyping && <span className="ai-sim-cursor" />}
@@ -154,7 +187,7 @@ export function AiBrainSimulator({ lang }: AiBrainSimulatorProps) {
           </span>
         ) : (
           <span className="ai-sim-status ai-sim-status--done">
-            ⚡ {lang === 'es' ? 'Categorizado al instante' : 'Categorized instantly'}
+            <BoltIcon /> {lang === 'es' ? 'Categorizado al instante' : 'Categorized instantly'}
           </span>
         )}
       </div>
@@ -167,7 +200,7 @@ export function AiBrainSimulator({ lang }: AiBrainSimulatorProps) {
               className="ai-sim-card__icon" 
               style={{ backgroundColor: activePreset.color }}
             >
-              {activePreset.emoji}
+              <activePreset.Icon />
             </div>
             <div className="ai-sim-card__details">
               <span className="ai-sim-card__merchant">{activePreset.merchantName}</span>
@@ -189,14 +222,6 @@ export function AiBrainSimulator({ lang }: AiBrainSimulatorProps) {
         )}
       </div>
 
-      {/* Latency subtext */}
-      {showResult && (
-        <span className="ai-sim-latency-badge fade-in">
-          {lang === 'es' ? 'Clasificado en ' : 'Classified in '}
-          <strong>{activePreset.latency}</strong>
-        </span>
-      )}
-
       {/* Preset Buttons */}
       <div className="ai-sim-presets">
         {presets.map((preset, idx) => (
@@ -206,7 +231,10 @@ export function AiBrainSimulator({ lang }: AiBrainSimulatorProps) {
             onClick={() => setActiveIndex(idx)}
             disabled={isTyping}
           >
-            {preset.emoji} {preset.merchantName}
+            <span className="ai-sim-preset-btn-icon" style={{ display: 'inline-flex', alignItems: 'center' }}>
+              <preset.Icon />
+            </span>
+            {preset.merchantName}
           </button>
         ))}
       </div>

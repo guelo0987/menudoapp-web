@@ -69,14 +69,14 @@ export function InvitationJoinPage({ lang, onNavigate }: InvitationJoinPageProps
                 fontWeight: '700',
                 border: 'none',
                 cursor: 'pointer',
-                borderRadius: '9999px',
+                borderRadius: 'var(--radius-2xl)',
               }}
             >
               {copy.cta}
             </button>
             
-            <div style={{ margin: '1.5rem 0 0.5rem', borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '1.5rem', width: '100%' }}>
-              <p style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.9rem', marginBottom: '1.2rem', textAlign: 'center' }}>
+            <div style={{ margin: '1.5rem 0 0.5rem', borderTop: '1px solid var(--border)', paddingTop: '1.5rem', width: '100%' }}>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.2rem', textAlign: 'center' }}>
                 {copy.noApp}
               </p>
               <div style={{ display: 'flex', gap: '0.8rem', justifyContent: 'center', flexWrap: 'wrap' }}>

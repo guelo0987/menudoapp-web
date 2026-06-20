@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
   /* Apple Senior Designer — Solid White Aesthetic */
@@ -6,17 +6,17 @@
   --bg-gradient: none;
   
   --surface: #ffffff; 
-  --surface-hover: #f8fbf7;
+  --surface-hover: #fcfdfe;
   --surface-strong: #ffffff;
   
   /* Primary & Accent Colors */
   --primary: #101510; /* Organic Carbon Black */
-  --primary-glow: rgba(16, 21, 16, 0.05);
+  --primary-glow: rgba(16, 21, 16, 0.02);
   --primary-gradient: none;
   
   --accent: #1f7c4b; /* Legible Dark Avocado Green */
   --accent-light: #67C98C; /* Vibrant Seed Avocado Green */
-  --accent-glow: rgba(103, 201, 140, 0.12);
+  --accent-glow: rgba(31, 124, 75, 0.05);
   --accent-gradient: none;
   
   /* Text colors */
@@ -27,23 +27,23 @@
   /* Borders and Glass */
   --border: #e2e8e3; /* Soft border with green tint */
   --border-hover: #b4c9b8; /* Muted avocado border on hover */
-  --border-accent: rgba(31, 124, 75, 0.25);
+  --border-accent: rgba(31, 124, 75, 0.15);
   --glass-blur: none;
   
-  /* Clean minimalist shadows */
-  --shadow-soft: 0 8px 30px rgba(16, 21, 16, 0.03);
+  /* Clean minimalist shadows (whisper shadows) */
+  --shadow-soft: 0 4px 20px rgba(16, 21, 16, 0.02);
   --shadow-glow: none;
   
-  /* Border Radii (Apple styled) */
-  --radius-2xl: 24px;
-  --radius-xl: 18px;
-  --radius-lg: 12px;
-  --radius-md: 8px;
+  /* Border Radii (Apple styled - crisp max 12-16px) */
+  --radius-2xl: 12px;
+  --radius-xl: 10px;
+  --radius-lg: 8px;
+  --radius-md: 6px;
   --radius-sm: 4px;
   
   /* Width Shells */
-  --shell-wide: min(1160px, calc(100vw - 48px));
-  --shell: min(840px, calc(100vw - 48px));
+  --shell-wide: min(1200px, calc(100vw - 48px));
+  --shell: min(900px, calc(100vw - 48px));
 }
 
 *,
@@ -62,7 +62,7 @@ body {
   min-width: 320px;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: 'Outfit', -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
