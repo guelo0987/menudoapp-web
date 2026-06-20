@@ -1,6 +1,7 @@
 import { FeatureGrid } from '../components/FeatureGrid';
 import { HomeHero } from '../components/HomeHero';
 import { AppShowcase } from '../components/AppShowcase';
+import { AnimatedBenefits } from '../components/AnimatedBenefits';
 import { siteContent, Language } from '../content/site';
 
 type HomePageProps = {
@@ -14,6 +15,9 @@ export function HomePage({ onNavigate, lang }: HomePageProps) {
   return (
     <main>
       <HomeHero onNavigate={onNavigate} lang={lang} />
+      
+      {/* Animated Benefits (Logging, Habit, Chart) */}
+      <AnimatedBenefits lang={lang} />
       
       {/* Bento Grid Features */}
       <FeatureGrid lang={lang} />

@@ -110,7 +110,7 @@ export function AiBrainSimulator({ lang }: AiBrainSimulatorProps) {
     
     const typingInterval = setInterval(() => {
       if (currentIdx < targetText.length) {
-        setTypedText((prev) => prev + targetText.charAt(currentIdx));
+        setTypedText(targetText.slice(0, currentIdx + 1));
         currentIdx++;
       } else {
         clearInterval(typingInterval);

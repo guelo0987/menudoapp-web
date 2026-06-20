@@ -20,7 +20,7 @@ function OfflineFlow({ lang }: { lang: Language }) {
     <div className={`offline-flow ${isSyncing ? 'offline-flow--syncing' : ''}`}>
       <div className={`offline-node ${!isSyncing ? 'offline-node--active' : ''}`}>
         <div className="offline-node__icon">📱</div>
-        <div className="offline-node__label">SQLite</div>
+        <div className="offline-node__label">{lang === 'es' ? 'Dispositivo' : 'Device'}</div>
         <div className="offline-node__status">
           {lang === 'es' ? 'Local' : 'Local'}
         </div>
@@ -43,7 +43,7 @@ function OfflineFlow({ lang }: { lang: Language }) {
       </div>
       <div className={`offline-node ${isSyncing ? 'offline-node--active' : ''}`}>
         <div className="offline-node__icon">☁️</div>
-        <div className="offline-node__label">Supabase</div>
+        <div className="offline-node__label">{lang === 'es' ? 'Nube' : 'Cloud'}</div>
         <div className="offline-node__status">
           {isSyncing ? (lang === 'es' ? 'Al día' : 'Synced') : (lang === 'es' ? 'Pausa' : 'Standby')}
         </div>

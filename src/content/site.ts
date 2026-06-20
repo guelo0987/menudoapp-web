@@ -47,7 +47,7 @@ export const siteContent = {
   },
   heroShared: {
     spotlightLabel: 'Dashboard',
-    spotlightImage: '/app-screenshots/hero_shots_so.png',
+    spotlightImage: '/app-screenshots/dashboard_web.png',
   },
   es: {
     nav: [
