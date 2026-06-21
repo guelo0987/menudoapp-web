@@ -23,11 +23,47 @@
     <lastmod>2024-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  <url>
+    <loc>https://menudoapp.com/blog</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://menudoapp.com/privacy-choices</loc>
-    <lastmod>2024-04-20</lastmod>
+    <loc>https://menudoapp.com/blog/automatizacion-apple-shortcuts-wallet</loc>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://menudoapp.com/blog/privacidad-finanzas-offline-first</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://menudoapp.com/blog/presupuestos-compartidos-pareja-familia</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://menudoapp.com/blog/lenguaje-natural-registro-finanzas</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://menudoapp.com/blog/control-suscripciones-gastos-recurrentes</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://menudoapp.com/blog/adios-hojas-de-calculo-registro-minimalista</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
+
