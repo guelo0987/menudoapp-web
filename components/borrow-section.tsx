@@ -42,28 +42,16 @@ function RealisticIPhone({
             {/* iOS Status Bar Overlay */}
             <div className="absolute top-0 inset-x-0 h-7 z-30 flex items-center justify-between px-5 text-[8.5px] font-bold tracking-tight text-zinc-900 pointer-events-none select-none">
               <span className="flex items-center gap-[2px]">
-                <span>10:10</span>
-                {/* Tiny Location Pin Icon */}
-                <svg className="w-[7px] h-[7px] fill-current" viewBox="0 0 24 24">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
               </span>
               
               <span className="flex items-center gap-1">
                 {/* 5G Signal bars */}
                 <span className="flex items-end gap-[0.8px] h-[6px]">
-                  <span className="w-[1px] h-[2px] bg-zinc-900 rounded-[0.2px]" />
-                  <span className="w-[1px] h-[3px] bg-zinc-900 rounded-[0.2px]" />
-                  <span className="w-[1px] h-[4px] bg-zinc-900 rounded-[0.2px]" />
-                  <span className="w-[1px] h-[5.5px] bg-zinc-900 rounded-[0.2px]" />
                 </span>
-                <span className="text-[8px] font-bold">5G</span>
+                <span className="text-[8px] font-bold"></span>
                 
                 {/* Battery Icon with Fill */}
-                <div className="relative w-[14.5px] h-[7.5px] border border-zinc-900/35 rounded-[2px] p-[0.5px] flex items-center justify-start">
-                  <div className="w-[80%] h-full rounded-[1px] bg-zinc-900" />
-                  <span className="absolute -right-[1.5px] top-[2.2px] w-[1px] h-[2.5px] bg-zinc-900/35 rounded-r-[0.3px]" />
-                </div>
+                
               </span>
             </div>
 
@@ -127,7 +115,7 @@ export function BorrowSection({ lang }: BorrowSectionProps) {
               />
               
               {/* Foreground interactive silver iPhone (video playback) */}
-              <RealisticIPhone width={215} height={465} className="z-10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.3)] group-hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.35)]">
+              <RealisticIPhone width={215} height={465} className="z-10 ">
                 <video
                   src="/videos/shortcut_video.mp4"
                   autoPlay
@@ -156,7 +144,7 @@ export function BorrowSection({ lang }: BorrowSectionProps) {
               />
               
               {/* Foreground interactive silver iPhone (video playback) */}
-              <RealisticIPhone width={215} height={465} className="z-10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.3)] group-hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.35)]">
+              <RealisticIPhone width={215} height={465} className="z-10">
                 <video
                   src="/videos/speech_text_video.mp4"
                   autoPlay
