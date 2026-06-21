@@ -1,42 +1,27 @@
-"use client"
+import type { Metadata } from 'next'
+import PageClient from './page-client'
 
-import { useState, useEffect } from "react"
-import { SiteHeader } from "@/components/site-header"
-import { Hero } from "@/components/hero"
-import { BorrowSection } from "@/components/borrow-section"
-import { BuildSection } from "@/components/build-section"
-import { NewsletterSection } from "@/components/newsletter-section"
-import { FaqSection } from "@/components/faq-section"
-import { SiteFooter } from "@/components/site-footer"
-import { Language } from "@/lib/site-content"
-
-export default function Page() {
-  const [lang, setLang] = useState<Language>('es')
-
-  useEffect(() => {
-    const saved = localStorage.getItem('menudo-lang') as Language
-    if (saved === 'es' || saved === 'en') {
-      setLang(saved)
-    }
-  }, [])
-
-  const handleSetLang = (l: Language) => {
-    setLang(l)
-    localStorage.setItem('menudo-lang', l)
+export const metadata: Metadata = {
+  title: 'Menudo — La mejor app de finanzas personales y presupuesto | Best Budgeting App',
+  description:
+    'Controla tus gastos diarios y presupuesto compartido de forma rápida y sin esfuerzo con comandos de voz, lenguaje natural y atajos automáticos. La mejor app de finanzas personales offline-first. Try the best budgeting app today!',
+  keywords: [
+    'best budgeting app',
+    'mejores app de finanzas personales',
+    'mejor app de presupuestos',
+    'app de control de gastos',
+    'personal finance app',
+    'app para presupuestos compartidos',
+    'budgeting app for couples',
+    'siri shortcuts budgeting',
+    'offline first personal finance',
+    'menudo app'
+  ],
+  alternates: {
+    canonical: 'https://menudoapp.com',
   }
-
-  return (
-    <div className="min-h-screen bg-background">
-      <SiteHeader lang={lang} setLang={handleSetLang} />
-      <main>
-        <Hero lang={lang} />
-        <BorrowSection lang={lang} />
-        <BuildSection lang={lang} />
-        <NewsletterSection lang={lang} />
-        <FaqSection lang={lang} />
-      </main>
-      <SiteFooter lang={lang} />
-    </div>
-  )
 }
 
+export default function Page() {
+  return <PageClient />
+}
