@@ -133,7 +133,7 @@ export const siteContent = {
       sections: [
         {
           title: '1. Responsable del Tratamiento',
-          body: 'Menudo App es desarrollada y operada por Miguel Cruz, con domicilio en la República Dominicana. Nos comprometemos a proteger su privacidad y a tratar sus datos de carácter personal conforme a los más altos estándares de transparencia y seguridad. Para cualquier consulta sobre esta política, puede escribirnos a: info@garauyan.resend.app.'
+          body: 'Menudo App es desarrollada y operada por Miguel Cruz, con domicilio en la República Dominicana. Nos comprometemos a proteger su privacidad y a tratar sus datos de carácter personal conforme a los más altos estándares de transparencia y seguridad. Para cualquier consulta sobre esta política, puede escribirnos a: soporte@menudoapp.com.'
         },
         {
           title: '2. Información que Recopilamos',
@@ -316,7 +316,7 @@ export const siteContent = {
       sections: [
         {
           title: '1. Data Controller',
-          body: 'Menudo App is developed and operated by Miguel Cruz, based in the Dominican Republic. We are committed to protecting your privacy and treating your personal data in accordance with the highest standards of transparency and security. For any inquiries regarding this policy, please contact us at: info@garauyan.resend.app.'
+          body: 'Menudo App is developed and operated by Miguel Cruz, based in the Dominican Republic. We are committed to protecting your privacy and treating your personal data in accordance with the highest standards of transparency and security. For any inquiries regarding this policy, please contact us at: soporte@menudoapp.com.'
         },
         {
           title: '2. Information We Collect',

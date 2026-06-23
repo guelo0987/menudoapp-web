@@ -42,7 +42,7 @@ export function SiteFooter({ lang }: SiteFooterProps) {
     contactTitle: "CONTACT",
     legalTitle: "LEGAL",
     downloadTitle: "DOWNLOAD",
-    email: "support@menudoapp.com",
+    email: "soporte@menudoapp.com",
     blog: "Blog",
     faq: "FAQ",
     privacy: "Privacy Policy",
