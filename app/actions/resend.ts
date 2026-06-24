@@ -32,7 +32,7 @@ export async function subscribeNewsletter(email: string) {
     const welcomeResult = await resend.emails.send({
       from: `${senderName} <${senderEmail}>`,
       to: email,
-      subject: "¡Ya estás en la lista de espera de Menudo! 🚀",
+      subject: "¡Ey! Gracias por sumarte a Menudo 🥑",
       html: `
 <!DOCTYPE html>
 <html lang="es">
@@ -43,7 +43,7 @@ export async function subscribeNewsletter(email: string) {
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #f4f4f5;
+      background-color: #fafafa;
       color: #18181b;
       margin: 0;
       padding: 0;
@@ -51,69 +51,56 @@ export async function subscribeNewsletter(email: string) {
     }
     .wrapper {
       width: 100%;
-      background-color: #f4f4f5;
-      padding: 32px 0;
+      background-color: #fafafa;
+      padding: 40px 0;
     }
     .container {
-      max-width: 600px;
+      max-width: 540px;
       margin: 0 auto;
       background-color: #ffffff;
       border: 1px solid #e4e4e7;
-      border-radius: 16px;
+      border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    }
-    .header {
-      background-color: #ffffff;
-      padding: 32px 24px;
-      text-align: center;
-      border-bottom: 1px solid #f4f4f5;
-    }
-    .logo {
-      font-size: 24px;
-      font-weight: 800;
-      color: #10b981;
-      letter-spacing: -0.05em;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
     }
     .content {
       padding: 40px 32px;
     }
     .headline {
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 22px;
+      font-weight: 800;
       color: #09090b;
-      margin-top: 0;
-      margin-bottom: 16px;
-      line-height: 1.3;
+      margin-top: 20px;
+      margin-bottom: 24px;
+      text-align: center;
+      letter-spacing: -0.02em;
     }
     .paragraph {
       font-size: 15px;
       line-height: 1.6;
-      color: #52525b;
-      margin-bottom: 24px;
+      color: #3f3f46;
+      margin-bottom: 20px;
     }
     .features-list {
-      margin-bottom: 32px;
-      padding-left: 0;
+      background-color: #fafafa;
+      border: 1px solid #f4f4f5;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 24px 0;
       list-style-type: none;
     }
     .feature-item {
       font-size: 14px;
-      line-height: 1.5;
-      color: #3f3f46;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: flex-start;
+      line-height: 1.6;
+      color: #27272a;
+      margin-bottom: 14px;
     }
-    .feature-icon {
-      color: #10b981;
-      font-weight: bold;
-      margin-right: 8px;
+    .feature-item:last-child {
+      margin-bottom: 0;
     }
     .cta-container {
       text-align: center;
-      margin-bottom: 32px;
-      margin-top: 24px;
+      margin: 32px 0 20px 0;
     }
     .cta-button {
       background-color: #10b981;
@@ -124,6 +111,7 @@ export async function subscribeNewsletter(email: string) {
       font-weight: 700;
       border-radius: 9999px;
       display: inline-block;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
     }
     .footer {
       background-color: #fafafa;
@@ -133,67 +121,60 @@ export async function subscribeNewsletter(email: string) {
       font-size: 12px;
       color: #a1a1aa;
     }
-    .footer a {
-      color: #71717a;
-      text-decoration: underline;
-    }
     
-    /* Avocado Animation styling */
-    @keyframes float {
-      0% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-10px) rotate(4deg); }
-      100% { transform: translateY(0px) rotate(0deg); }
-    }
-    .avocado-box {
+    /* Avocado video container */
+    .video-container {
       text-align: center;
-      padding: 10px 0 20px 0;
-    }
-    .avocado-animated {
-      display: inline-block;
-      font-size: 54px;
-      animation: float 2.5s ease-in-out infinite;
-      cursor: default;
-      user-select: none;
+      margin: 10px auto;
+      width: 150px;
+      height: 150px;
     }
   </style>
 </head>
 <body>
   <div class="wrapper">
     <div class="container">
-      <div class="header">
-        <div class="logo">Menudo</div>
-      </div>
       <div class="content">
-        <div class="avocado-box">
-          <span class="avocado-animated">🥑</span>
+        <div class="video-container">
+          <video autoplay loop muted playsinline width="150" height="150" style="display: block; border-radius: 24px; outline: none;">
+            <source src="https://menudoapp.com/videos/animation4.mov" type="video/quicktime">
+            <div style="font-size: 64px; line-height: 150px; text-align: center;">🥑</div>
+          </video>
         </div>
-        <h1 class="headline">¡Ya estás en la lista de espera de Menudo! 🥑🚀</h1>
-        <p class="paragraph">Hola,</p>
-        <p class="paragraph">Gracias por registrarte para recibir novedades sobre el lanzamiento de Menudo. Estamos trabajando arduamente para crear la herramienta de finanzas compartidas más rápida, inteligente y fluida del mercado.</p>
         
-        <p class="paragraph"><strong>¿Qué hace a Menudo diferente?</strong></p>
-        <ul class="features-list">
-          <li class="feature-item">
-            <span class="feature-icon">✓</span>
-            <div><strong>Control Compartido:</strong> Comparte presupuestos en tiempo real con tu pareja, roomies o familia sin fricciones ni malentendidos.</div>
-          </li>
-          <li class="feature-item">
-            <span class="feature-icon">✓</span>
-            <div><strong>Registro Inteligente con IA:</strong> Escribe o habla con lenguaje natural (ej. "pagamos la pizza de anoche por 450 pesos") y nuestra IA organiza el gasto al instante.</div>
-          </li>
-          <li class="feature-item">
-            <span class="feature-icon">✓</span>
-            <div><strong>Arquitectura Offline-First:</strong> Registra tus gastos estés donde estés (incluso sin internet en el súper), la app sincronizará todo de manera segura al recuperar señal.</div>
-          </li>
-        </ul>
+        <h1 class="headline">¡Ey! Gracias por sumarte a Menudo 🥑</h1>
+        
+        <p class="paragraph">La verdad es que nos cansamos de las apps de finanzas lentas o súper complejas, y por eso estamos creando Menudo. Queremos algo rápido, inteligente y que de verdad sirva en el día a día.</p>
+        
+        <p class="paragraph">Aquí te dejo una probadita de lo que estamos armando:</p>
+        
+        <div class="features-list">
+          <div class="feature-item">
+            <strong>📊 Presupuestos Compartidos:</strong> Lleva las cuentas con tu pareja, roomies o familia en tiempo real y sin fricciones.
+          </div>
+          <div class="feature-item">
+            <strong>⚡ Atajos de Apple (Shortcuts):</strong> Registra tus gastos al instante mediante widgets o automatizaciones de iOS.
+          </div>
+          <div class="feature-item">
+            <strong>🧠 Registro inteligente con IA:</strong> Escribe o habla de forma natural (ej. "pizza por 400 pesos") y la IA lo categoriza al segundo.
+          </div>
+          <div class="feature-item">
+            <strong>🔄 Suscripciones y Recurrentes:</strong> Configura tus gastos fijos (Netflix, renta, Spotify) para que se registren solos mientras duermes.
+          </div>
+          <div class="feature-item">
+            <strong>📡 Offline-First & Idempotencia:</strong> Registra gastos incluso sin señal. Se sincroniza al recuperar internet de forma segura, evitando cobros dobles.
+          </div>
+        </div>
         
         <div class="cta-container">
-          <a href="https://menudoapp.com" class="cta-button" target="_blank">Visitar Sitio Web</a>
+          <a href="https://menudoapp.com" class="cta-button" target="_blank">Explorar Menudo</a>
         </div>
         
-        <p class="paragraph">Si tienes alguna pregunta, sugerencia o simplemente quieres darnos feedback de lo que esperas de la app, puedes responder directamente a este correo o escribirnos a <a href="mailto:soporte@menudoapp.com" style="color: #10b981; text-decoration: none;">soporte@menudoapp.com</a>.</p>
+        <p class="paragraph" style="margin-top: 28px;">Te avisaremos en cuanto tengamos la beta lista para que seas de los primeros en probarla.</p>
         
-        <p class="paragraph" style="margin-bottom: 0;">— El equipo de Menudo</p>
+        <p class="paragraph">Si tienes alguna sugerencia de lo que te gustaría ver en la app, respóndeme directamente a este correo.</p>
+        
+        <p class="paragraph" style="margin-bottom: 0; font-weight: 700; color: #18181b;">— El equipo de Menudo</p>
       </div>
       <div class="footer">
         <p style="margin-top: 0;">Recibiste este correo porque te registraste en la lista de espera de menudoapp.com.</p>
