@@ -122,6 +122,13 @@ export async function subscribeNewsletter(email: string) {
       color: #71717a;
       text-decoration: underline;
     }
+    .ps {
+      margin-top: 24px;
+      font-size: 12px;
+      color: #71717a;
+      font-style: italic;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
@@ -162,6 +169,8 @@ export async function subscribeNewsletter(email: string) {
         <p class="paragraph">Si tienes alguna sugerencia o quieres decirnos algo sobre lo que esperas de la app, solo responde directamente a este correo. Nos encantaría escucharte.</p>
         
         <p class="paragraph" style="margin-bottom: 0; font-weight: 700; color: #18181b;">— El equipo de Menudo</p>
+        
+        <p class="ps">P.D. Si este correo te llegó a la pestaña de Promociones, arrástralo a tu bandeja Principal. Así Gmail sabrá que quieres recibir nuestras alertas en tu bandeja de entrada principal.</p>
       </div>
       <div class="footer">
         <p style="margin-top: 0; margin-bottom: 8px;">Recibiste este correo porque te registraste en la lista de espera de <a href="https://menudoapp.com" target="_blank">menudoapp.com</a>.</p>
