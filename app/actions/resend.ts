@@ -32,7 +32,7 @@ export async function subscribeNewsletter(email: string) {
     const welcomeResult = await resend.emails.send({
       from: `${senderName} <${senderEmail}>`,
       to: email,
-      subject: "¡Ey! Qué bueno tenerte en la lista de Menudo 🥑",
+      subject: "Gracias por unirte a Menudo",
       html: `
 <!DOCTYPE html>
 <html lang="es">
@@ -157,7 +157,7 @@ export async function subscribeNewsletter(email: string) {
           </div>
         </div>
         
-        <p class="paragraph" style="margin-top: 24px;">Y muchísimas cosas más que ya verás cuando la app esté disponible. Registrar y llevar tus finanzas compartidas va a ser de verdad divertido y sin dolores de cabeza.</p>
+        <p class="paragraph" style="margin-top: 24px;">Y muchísimas cosas más que ya verás cuando la app esté disponible en el App Store. Registrar y llevar tus finanzas compartidas va a ser de verdad divertido y sin dolores de cabeza.</p>
         
         <p class="paragraph">Si tienes alguna sugerencia o quieres decirnos algo sobre lo que esperas de la app, solo responde directamente a este correo. Nos encantaría escucharte.</p>
         
