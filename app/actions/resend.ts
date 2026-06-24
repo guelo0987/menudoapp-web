@@ -55,35 +55,41 @@ export async function subscribeNewsletter(email: string) {
       padding: 32px 0;
     }
     .container {
-      max-width: 500px;
+      max-width: 480px;
       margin: 0 auto;
       background-color: #ffffff;
       border: 1px solid #e4e4e7;
-      border-radius: 20px;
+      border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
     }
     .header {
       background-color: #ffffff;
-      padding: 24px;
+      padding: 32px 24px 16px 24px;
       text-align: center;
-      border-bottom: 1px solid #f4f4f5;
     }
-    .logo {
-      font-size: 20px;
-      font-weight: 800;
-      color: #10b981;
-      letter-spacing: -0.03em;
+    .logo-img {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: inline-block;
+    }
+    .avocado-divider {
+      font-size: 40px;
+      text-align: center;
+      margin: 12px 0;
+      line-height: 1;
     }
     .content {
-      padding: 32px 24px;
+      padding: 0 32px 32px 32px;
     }
     .headline {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 800;
       color: #09090b;
-      margin-top: 0;
+      margin-top: 8px;
       margin-bottom: 20px;
+      text-align: center;
       letter-spacing: -0.02em;
     }
     .paragraph {
@@ -95,14 +101,14 @@ export async function subscribeNewsletter(email: string) {
     .features-list {
       background-color: #fafafa;
       border: 1px solid #f4f4f5;
-      border-radius: 12px;
-      padding: 16px;
-      margin: 20px 0;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 24px 0;
       list-style-type: none;
     }
     .feature-item {
       font-size: 13px;
-      line-height: 1.5;
+      line-height: 1.6;
       color: #27272a;
       margin-bottom: 12px;
     }
@@ -111,7 +117,7 @@ export async function subscribeNewsletter(email: string) {
     }
     .footer {
       background-color: #fafafa;
-      padding: 20px 24px;
+      padding: 24px;
       text-align: center;
       border-top: 1px solid #f4f4f5;
       font-size: 11px;
@@ -135,10 +141,11 @@ export async function subscribeNewsletter(email: string) {
   <div class="wrapper">
     <div class="container">
       <div class="header">
-        <div class="logo">🥑 Menudo</div>
+        <img src="https://menudoapp.com/brand/menudo-logo.png" alt="Menudo Logo" class="logo-img" />
+        <div class="avocado-divider">🥑</div>
       </div>
       <div class="content">
-        <h1 class="headline">¡Ey! Qué bueno tenerte en la lista de Menudo 🥑</h1>
+        <h1 class="headline">¡Ey! Qué bueno tenerte en la lista de Menudo</h1>
         
         <p class="paragraph">La verdad es que nos cansamos de las apps de finanzas lentas y complejas, así que decidimos crear algo rápido, inteligente y que sirva de verdad en el día a día.</p>
         
