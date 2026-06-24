@@ -38,145 +38,55 @@ export async function subscribeNewsletter(email: string) {
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bienvenido a Menudo</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #fafafa;
-      color: #18181b;
-      margin: 0;
-      padding: 0;
-      -webkit-font-smoothing: antialiased;
-    }
-    .wrapper {
-      width: 100%;
-      background-color: #fafafa;
-      padding: 32px 0;
-    }
-    .container {
-      max-width: 500px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #1c1917;
+      max-width: 550px;
       margin: 0 auto;
-      background-color: #ffffff;
-      border: 1px solid #e4e4e7;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+      padding: 20px;
     }
-    .content {
-      padding: 32px 24px;
-    }
-    .headline {
-      font-size: 20px;
-      font-weight: 800;
-      color: #09090b;
-      margin-top: 16px;
-      margin-bottom: 20px;
-      text-align: center;
-      letter-spacing: -0.02em;
-    }
-    .paragraph {
-      font-size: 14px;
-      line-height: 1.55;
-      color: #3f3f46;
+    p {
       margin-bottom: 16px;
     }
-    .features-list {
-      background-color: #fafafa;
-      border: 1px solid #f4f4f5;
-      border-radius: 12px;
-      padding: 16px;
-      margin: 20px 0;
-      list-style-type: none;
+    ul {
+      padding-left: 20px;
+      margin-bottom: 16px;
     }
-    .feature-item {
-      font-size: 13px;
-      line-height: 1.5;
-      color: #27272a;
-      margin-bottom: 12px;
+    li {
+      margin-bottom: 8px;
     }
-    .feature-item:last-child {
-      margin-bottom: 0;
-    }
-    .footer {
-      background-color: #fafafa;
-      padding: 20px 24px;
-      text-align: center;
-      border-top: 1px solid #f4f4f5;
-      font-size: 11px;
-      color: #a1a1aa;
-    }
-    .logo-container {
-      text-align: center;
-      margin: 10px 0;
-    }
-    .logo-img {
-      width: 60px;
-      height: 60px;
-      border-radius: 14px;
-      display: inline-block;
-    }
-    
-    /* Avocado video container */
-    .video-container {
-      text-align: center;
-      margin: 15px auto;
-      width: 120px;
-      height: 120px;
+    .signature {
+      margin-top: 24px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="container">
-      <div class="content">
-        <div class="logo-container">
-          <img src="https://menudoapp.com/brand/menudo-logo.png" alt="Menudo Logo" class="logo-img" />
-        </div>
-        
-        <div class="video-container">
-          <video autoplay loop muted playsinline width="120" height="120" style="display: block; border-radius: 20px; outline: none;">
-            <source src="https://menudoapp.com/videos/animation4.mov" type="video/quicktime">
-            <div style="font-size: 54px; line-height: 120px; text-align: center;">🥑</div>
-          </video>
-        </div>
-        
-        <h1 class="headline">¡Ey! Qué bueno tenerte en la lista de Menudo 🥑</h1>
-        
-        <p class="paragraph">La verdad es que nos cansamos de las apps de finanzas lentas y complejas, así que decidimos crear algo rápido, inteligente y que sirva de verdad en el día a día.</p>
-        
-        <p class="paragraph">Te avisaremos de inmediato en cuanto la aplicación esté publicada en la App Store para que la descargues antes que nadie.</p>
-        
-        <p class="paragraph">Mientras tanto, aquí te dejo las principales cosas que estamos preparando para ti:</p>
-        
-        <div class="features-list">
-          <div class="feature-item">
-            <strong>📊 Presupuestos Compartidos:</strong> Lleva las cuentas con tu pareja o familia en tiempo real sin tener que preguntar quién pagó qué.
-          </div>
-          <div class="feature-item">
-            <strong>⚡ Atajos de Apple (Shortcuts):</strong> Registra gastos al instante mediante widgets o automatizaciones de iOS.
-          </div>
-          <div class="feature-item">
-            <strong>🧠 Registro con IA:</strong> Escribe o habla de forma natural (ej. "gasolina por 350 pesos") y la IA lo organiza al segundo.
-          </div>
-          <div class="feature-item">
-            <strong>🔄 Suscripciones y Recurrentes:</strong> Tus gastos fijos (renta, Netflix, Spotify) se registran solos.
-          </div>
-          <div class="feature-item">
-            <strong>📡 Offline-First & Idempotencia:</strong> Registra gastos incluso sin señal. Se sincroniza al recuperar internet de forma segura para evitar cobros dobles.
-          </div>
-        </div>
-        
-        <p class="paragraph" style="margin-top: 24px;">Si tienes alguna sugerencia o quieres decirnos algo sobre lo que esperas de la app, solo responde directamente a este correo. Nos encantaría escucharte.</p>
-        
-        <p class="paragraph" style="margin-bottom: 0; font-weight: 700; color: #18181b;">— El equipo de Menudo</p>
-      </div>
-      <div class="footer">
-        <p style="margin-top: 0;">Recibiste este correo porque te registraste en menudoapp.com.</p>
-        <p style="margin-bottom: 0;">© 2026 Menudo App. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </div>
+  <p>¡Ey! Qué bueno tenerte en la lista de espera de Menudo 🥑</p>
+  
+  <p>La verdad es que nos cansamos de las apps de finanzas lentas y complejas, así que decidimos crear algo rápido, inteligente y que sirva de verdad en el día a día.</p>
+  
+  <p>Te avisaremos de inmediato por este correo en cuanto la aplicación esté disponible en la App Store para descargar.</p>
+  
+  <p>Mientras tanto, te cuento algunas de las cosas que estamos preparando para ti:</p>
+  
+  <ul>
+    <li><strong>Presupuestos Compartidos:</strong> Lleva las cuentas con tu pareja o familia en tiempo real y sin fricciones.</li>
+    <li><strong>Atajos de Apple (Shortcuts):</strong> Registra tus gastos al instante mediante widgets o automatizaciones de iOS.</li>
+    <li><strong>Registro con IA:</strong> Habla o escribe de forma natural (ej. "pizza por 400 pesos") y la IA lo organiza al segundo.</li>
+    <li><strong>Suscripciones y Recurrentes:</strong> Tus gastos fijos (renta, Netflix, Spotify) se registran solos.</li>
+    <li><strong>Offline-First:</strong> Registra tus gastos aunque no tengas señal. Sincroniza al recuperar internet de forma segura para evitar cobros dobles.</li>
+  </ul>
+  
+  <p>Y muchísimas cosas más que ya verás cuando la app esté disponible en el App Store. Registrar y llevar tus finanzas compartidas va a ser de verdad divertido y sin dolores de cabeza.</p>
+  
+  <p>Si tienes alguna sugerencia o quieres decirnos algo sobre lo que esperas de la app, solo responde directamente a este correo. Nos encantaría leerte.</p>
+  
+  <p class="signature">— El equipo de Menudo</p>
 </body>
 </html>
       `,
@@ -203,6 +113,7 @@ export async function subscribeNewsletter(email: string) {
     }
   }
 }
+
 
 export async function sendSupportMessage(formData: { name: string; email: string; message: string }) {
   const { name, email, message } = formData
