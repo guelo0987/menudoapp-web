@@ -102,5 +102,19 @@
       "Labels when editing recurring transactions now adapt dynamically to 'Next Execution' with auto-calculated future dates.",
       "Integrated advanced end-to-end push notification telemetry to verify reminders reach your device successfully."
     ]
+  },
+  "1.0.0+24": {
+    "es": [
+      "Integramos el diálogo nativo de calificación de Apple App Store después de registrar tu primera transacción.",
+      "Menú de Ajustes mejorado para calificar la app directamente en la tienda y evitar prompts repetitivos si decides cancelar.",
+      "Corregimos traducciones híbridas de inglés/español ('Spanglish') en múltiples pantallas (Panel, Ajustes, Presupuestos y Showcase).",
+      "Corregimos el desbordamiento en el diseño horizontal al sugerir el catálogo de categorías en lote."
+    ],
+    "en": [
+      "Integrated Apple App Store native review prompts inside the app after your first transaction.",
+      "Improved Settings options to rate the app directly in the store and prevent repeating prompts if dismissed.",
+      "Language audit fixing hybrid English/Spanish ('Spanglish') text bugs across all views.",
+      "Fixed layout overflow issues when showing horizontal category recommendations."
+    ]
   }
 }
