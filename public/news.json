@@ -131,7 +131,7 @@
       "Fixed layout overflow issues when showing horizontal category recommendations."
     ]
   },
-  "1.0.0+27": {
+  "1.0.0+28": {
     "es": [
       "Corregimos un error crítico de inicialización de pantalla (VSync client null dereference) que causaba cierres inesperados en iOS.",
       "Optimización en la carga inicial y bypass seguro en modo fuera de línea.",
