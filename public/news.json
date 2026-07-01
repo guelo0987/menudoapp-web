@@ -145,14 +145,14 @@
   },
   "1.0.0+33": {
     "es": [
-      "Corregimos un error de duplicación visual en el Dashboard tras registrar transacciones mediante los Atajos de Apple (idempotencia optimizada).",
-      "Implementamos la auto-renovación silenciosa de sesión en segundo plano al ejecutar Atajos de iOS con tokens expirados.",
-      "Incrementamos los límites de tiempo de espera a 15 segundos para mayor estabilidad en redes lentas o inestables."
+      "Corregimos un error que a veces duplicaba tus gastos en la pantalla principal al registrarlos con los Atajos rápidos.",
+      "Mejoramos el registro rápido desde Atajos: ahora funciona de forma automática en segundo plano incluso si tienes días sin abrir la aplicación.",
+      "Mayor estabilidad y resiliencia en la sincronización bajo conexiones móviles lentas o inestables."
     ],
     "en": [
-      "Fixed visual transaction duplication on the Dashboard after registering expenses using iOS Shortcuts (optimized idempotency).",
-      "Implemented silent background session auto-refresh when executing iOS Shortcuts with expired tokens.",
-      "Increased network request timeouts to 15 seconds for enhanced stability on slow or unstable connections."
+      "Fixed an issue that sometimes duplicated expenses on your home screen when logged using quick Shortcuts.",
+      "Improved quick Shortcuts: registration now runs smoothly in the background even if the app hasn't been opened in days.",
+      "Better synchronization stability on slow or unstable mobile data connections."
     ]
   }
 }
