@@ -142,5 +142,17 @@
       "Startup optimization and improved offline fallback behavior.",
       "Telemetry and diagnostics cleanup for enhanced user privacy."
     ]
+  },
+  "1.0.0+33": {
+    "es": [
+      "Corregimos un error de duplicación visual en el Dashboard tras registrar transacciones mediante los Atajos de Apple (idempotencia optimizada).",
+      "Implementamos la auto-renovación silenciosa de sesión en segundo plano al ejecutar Atajos de iOS con tokens expirados.",
+      "Incrementamos los límites de tiempo de espera a 15 segundos para mayor estabilidad en redes lentas o inestables."
+    ],
+    "en": [
+      "Fixed visual transaction duplication on the Dashboard after registering expenses using iOS Shortcuts (optimized idempotency).",
+      "Implemented silent background session auto-refresh when executing iOS Shortcuts with expired tokens.",
+      "Increased network request timeouts to 15 seconds for enhanced stability on slow or unstable connections."
+    ]
   }
 }
