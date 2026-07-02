@@ -154,5 +154,17 @@
       "Improved quick Shortcuts: registration now runs smoothly in the background even if the app hasn't been opened in days.",
       "Better synchronization stability on slow or unstable mobile data connections."
     ]
+  },
+  "1.0.0+34": {
+    "es": [
+      "Eliminamos el molesto parpadeo de pantalla que ocurría al cambiar de mes o de lista para que tus transiciones sean súper fluidas.",
+      "Corregimos un pequeño detalle visual donde la primera cifra de tus balances se recortaba ligeramente en el borde izquierdo.",
+      "Mayor estabilidad y velocidad interna al validar el estado de tus suscripciones Premium."
+    ],
+    "en": [
+      "Removed the screen flash when switching months or lists on the dashboard for buttery-smooth transitions.",
+      "Fixed a visual layout issue where the first digit of your balance was slightly cut off on the left.",
+      "Enhanced backend stability and performance when validating your active Premium subscriptions."
+    ]
   }
 }
