@@ -166,5 +166,13 @@
       "Fixed a visual layout issue where the first digit of your balance was slightly cut off on the left.",
       "Enhanced backend stability and performance when validating your active Premium subscriptions."
     ]
+  },
+  "1.0.4+46": {
+    "es": [
+      "Mejoras de rendimiento."
+    ],
+    "en": [
+      "Performance updates."
+    ]
   }
 }
