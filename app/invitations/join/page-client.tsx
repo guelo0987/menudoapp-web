@@ -59,7 +59,7 @@ export default function InvitationJoinPageClient() {
     }
   }
 
-  const appStoreUrl = "/support" // Direct to support or store page
+  const appStoreUrl = "https://apps.apple.com/do/app/menudo-budget-expense/id6773500340?l=en-GB"
 
   const copy =
     lang === "es"

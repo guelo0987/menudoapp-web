@@ -77,7 +77,7 @@ export function Hero({ lang }: HeroProps) {
         {/* CTAs */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="/support"
+            href="https://apps.apple.com/do/app/menudo-budget-expense/id6773500340?l=en-GB"
             className="transition-transform active:scale-95 hover:scale-[1.03] duration-200"
           >
             <img

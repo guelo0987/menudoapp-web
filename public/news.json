@@ -174,5 +174,15 @@
     "en": [
       "Performance updates."
     ]
+  },
+  "1.0.2+43": {
+    "es": [
+      "Corrección de errores y mejoras de estabilidad.",
+      "Mejoras de rendimiento general."
+    ],
+    "en": [
+      "Bug fixes and stability improvements.",
+      "General performance improvements."
+    ]
   }
 }

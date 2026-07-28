@@ -125,7 +125,7 @@ export function SiteFooter({ lang }: SiteFooterProps) {
               </h4>
               <div className="flex sm:flex-col gap-3">
                 <a
-                  href="/support"
+                  href="https://apps.apple.com/do/app/menudo-budget-expense/id6773500340?l=en-GB"
                   className="h-11 w-11 flex items-center justify-center bg-white border border-zinc-200/80 rounded-xl shadow-xs hover:bg-zinc-100 hover:scale-[1.03] active:scale-95 transition-all duration-200"
                   aria-label="Download on App Store"
                 >
