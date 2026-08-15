@@ -109,7 +109,7 @@ export function BorrowSection({ lang }: BorrowSectionProps) {
             <div className="relative w-[215px] h-[465px] flex items-center justify-center">
               {/* Background static context (screenshot) */}
               <img
-                src="/app-screenshots/AUINTA.png"
+                src="/app-screenshots/AUINTA.webp"
                 alt="Menudo App Shortcuts static view showing expense lists"
                 className="absolute -left-16 top-10 w-[195px] h-auto rounded-[2rem] shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-zinc-100 opacity-60 group-hover:opacity-90 -rotate-[8deg] group-hover:-rotate-[11deg] group-hover:-translate-x-3 transition-all duration-700 select-none pointer-events-none z-0"
               />
@@ -138,7 +138,7 @@ export function BorrowSection({ lang }: BorrowSectionProps) {
             <div className="relative w-[215px] h-[465px] flex items-center justify-center">
               {/* Background static context (screenshot) */}
               <img
-                src="/app-screenshots/speech-totext.jpeg"
+                src="/app-screenshots/speech-totext.webp"
                 alt="Menudo App Voice entry screen showing speech to text processing"
                 className="absolute -right-16 top-10 w-[195px] h-auto rounded-[2rem] shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-zinc-100 opacity-60 group-hover:opacity-90 rotate-[8deg] group-hover:rotate-[11deg] group-hover:translate-x-3 transition-all duration-700 select-none pointer-events-none z-0"
               />

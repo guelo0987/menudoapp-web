@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils"
 export function MenudoMark({ className }: { className?: string }) {
   return (
     <img
-      src="/brand/menudo-logo.png"
+      src="/brand/menudo-logo.webp"
       alt="Menudo"
       className={cn("h-7 w-7 rounded-lg object-contain", className)}
     />

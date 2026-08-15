@@ -103,7 +103,7 @@ export function Hero({ lang }: HeroProps) {
       <div className="relative mx-auto mt-12 hidden md:flex max-w-4xl h-[620px] items-end justify-center px-5 md:mt-16 pb-12 group/stack overflow-visible">
         {/* Card 0 - Budgets */}
         <img
-          src="/app-screenshots/427shots_so.png"
+          src="/app-screenshots/427shots_so.webp"
           alt="Menudo App Screen Left"
           className={cn(
             "w-[280px] h-auto shrink-0 transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] select-none pointer-events-none absolute bottom-12 left-1/2 origin-bottom",
@@ -116,7 +116,7 @@ export function Hero({ lang }: HeroProps) {
         />
         {/* Card 1 - Overview */}
         <img 
-          src="/app-screenshots/809shots_so.png"
+          src="/app-screenshots/809shots_so.webp"
           alt="Menudo App Screen Center"
           className={cn(
             "w-[280px] h-auto shrink-0 transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] select-none pointer-events-none absolute bottom-12 left-1/2 origin-bottom",
@@ -129,7 +129,7 @@ export function Hero({ lang }: HeroProps) {
         />
         {/* Card 2 - Analytics */}
         <img
-          src="/app-screenshots/CUARTA.png"
+          src="/app-screenshots/CUARTA.webp"
           alt="Menudo App Screen Right"
           className={cn(
             "w-[280px] h-auto shrink-0 transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] select-none pointer-events-none absolute bottom-12 left-1/2 origin-bottom",
@@ -150,7 +150,7 @@ export function Hero({ lang }: HeroProps) {
         >
           {/* Card 0 - Budgets */}
           <img
-            src="/app-screenshots/427shots_so.png"
+            src="/app-screenshots/427shots_so.webp"
             alt="Menudo App Screen Left"
             className={cn(
               "w-[210px] h-auto shrink-0 transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] absolute bottom-8 left-1/2 select-none pointer-events-none origin-bottom",
@@ -163,7 +163,7 @@ export function Hero({ lang }: HeroProps) {
           />
           {/* Card 1 - Overview */}
           <img 
-            src="/app-screenshots/809shots_so.png"
+            src="/app-screenshots/809shots_so.webp"
             alt="Menudo App Screen Center"
             className={cn(
               "w-[210px] h-auto shrink-0 transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] absolute bottom-8 left-1/2 select-none pointer-events-none origin-bottom",
@@ -176,7 +176,7 @@ export function Hero({ lang }: HeroProps) {
           />
           {/* Card 2 - Analytics */}
           <img
-            src="/app-screenshots/CUARTA.png"
+            src="/app-screenshots/CUARTA.webp"
             alt="Menudo App Screen Right"
             className={cn(
               "w-[210px] h-auto shrink-0 transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] absolute bottom-8 left-1/2 select-none pointer-events-none origin-bottom",

@@ -6,21 +6,26 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Language } from "@/lib/site-content"
 import { blogPosts } from "@/lib/blog-data"
+import { altPath } from "@/lib/i18n"
 import Link from "next/link"
 import { ArrowLeft, Calendar } from "lucide-react"
 
-export default function BlogDetailPageClient() {
+export default function BlogDetailPageClient({ lang: langProp }: { lang?: Language } = {}) {
   const params = useParams()
   const slug = params.slug as string
 
-  const [lang, setLang] = useState<Language>("es")
+  const [lang, setLang] = useState<Language>(langProp ?? "es")
 
   useEffect(() => {
+    // Si la URL define el idioma, manda ella y no la preferencia guardada.
+    if (langProp) return
     const saved = localStorage.getItem("menudo-lang") as Language
     if (saved === "es" || saved === "en") {
       setLang(saved)
     }
-  }, [])
+  }, [langProp])
+
+  const localized = (href: string) => (lang === "en" ? altPath(href, "en") : href)
 
   const handleSetLang = (l: Language) => {
     setLang(l)
@@ -48,7 +53,7 @@ export default function BlogDetailPageClient() {
         <SiteHeader lang={lang} setLang={handleSetLang} />
         <main className="flex-grow flex flex-col items-center justify-center p-5 text-center">
           <h1 className="font-heading text-2xl font-bold text-zinc-900 mb-4">{copy.notFound}</h1>
-          <Link href="/blog" className="inline-flex items-center gap-2 text-brand font-bold text-sm">
+          <Link href={localized("/blog")} className="inline-flex items-center gap-2 text-brand font-bold text-sm">
             <ArrowLeft className="h-4 w-4" /> {copy.backToList}
           </Link>
         </main>
@@ -64,11 +69,11 @@ export default function BlogDetailPageClient() {
       <main className="flex-grow mx-auto max-w-3xl w-full px-5 py-12 md:py-20">
         {/* Breadcrumbs matching the MonAi styling */}
         <nav className="flex items-center gap-1.5 text-xs text-foreground/45 mb-8 font-medium">
-          <Link href="/" className="hover:text-foreground/80 transition-colors">
+          <Link href={localized("/")} className="hover:text-foreground/80 transition-colors">
             {copy.home}
           </Link>
           <span>/</span>
-          <Link href="/blog" className="hover:text-foreground/80 transition-colors">
+          <Link href={localized("/blog")} className="hover:text-foreground/80 transition-colors">
             {copy.blog}
           </Link>
           <span>/</span>
@@ -103,7 +108,7 @@ export default function BlogDetailPageClient() {
         {/* Back Link */}
         <div className="mt-16 pt-8 border-t border-border">
           <Link 
-            href="/blog" 
+            href={localized("/blog")} 
             className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-muted transition-all duration-200"
           >
             <ArrowLeft className="h-4 w-4" /> {copy.backToList}

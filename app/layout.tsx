@@ -2,6 +2,14 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
+import {
+  SITE_NAME,
+  SITE_URL,
+  jsonLd,
+  organizationSchema,
+  softwareApplicationSchema,
+  websiteSchema,
+} from '@/lib/seo'
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -10,9 +18,47 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Menudo — Finanzas Claras. Sin Esfuerzo.',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'Menudo — Finanzas Claras. Sin Esfuerzo.',
+    template: `%s | ${SITE_NAME}`,
+  },
   description:
     'Escribe o habla: Menudo organiza tus finanzas de manera inteligente al instante, sincronizando de forma segura incluso cuando no tienes conexión.',
+  applicationName: SITE_NAME,
+  authors: [{ name: 'Miguel Cruz' }],
+  creator: 'Miguel Cruz',
+  publisher: SITE_NAME,
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    siteName: SITE_NAME,
+    locale: 'es_DO',
+    alternateLocale: ['en_US'],
+    url: SITE_URL,
+    title: 'Menudo — Finanzas Claras. Sin Esfuerzo.',
+    description:
+      'App de finanzas personales y presupuestos compartidos. Registra tus gastos hablando, funciona sin conexión y sincroniza solo.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Menudo — Finanzas Claras. Sin Esfuerzo.',
+    description:
+      'App de finanzas personales y presupuestos compartidos. Registra tus gastos hablando, funciona sin conexión y sincroniza solo.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
   icons: {
     icon: [
       {
@@ -42,7 +88,19 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} bg-background`} suppressHydrationWarning>
+    <html lang="es" className={`${poppins.variable} bg-background`} suppressHydrationWarning>
+      <head>
+        {/* Datos estructurados de sitio: los buscadores y los motores de IA los
+            leen para saber qué es Menudo, quién lo hace y qué features tiene. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLd([
+            organizationSchema,
+            websiteSchema,
+            softwareApplicationSchema,
+          ])}
+        />
+      </head>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

@@ -7,15 +7,17 @@ import { siteContent, Language } from "@/lib/site-content"
 import { Sparkles, ArrowLeft, Mail } from "lucide-react"
 import Link from "next/link"
 
-export default function TermsOfServicePageClient() {
-  const [lang, setLang] = useState<Language>("es")
+export default function TermsOfServicePageClient({ lang: langProp }: { lang?: Language } = {}) {
+  const [lang, setLang] = useState<Language>(langProp ?? "es")
 
   useEffect(() => {
+    // Si la URL define el idioma, manda ella y no la preferencia guardada.
+    if (langProp) return
     const saved = localStorage.getItem("menudo-lang") as Language
     if (saved === "es" || saved === "en") {
       setLang(saved)
     }
-  }, [])
+  }, [langProp])
 
   const handleSetLang = (l: Language) => {
     setLang(l)

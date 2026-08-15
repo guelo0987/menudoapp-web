@@ -1,4 +1,5 @@
 import { Language } from "@/lib/site-content"
+import { altPath } from "@/lib/i18n"
 import Link from "next/link"
 import { MenudoLogo } from "@/components/menudo-logo"
 
@@ -26,6 +27,9 @@ function PlayStoreIcon() {
 
 export function SiteFooter({ lang }: SiteFooterProps) {
   const isEs = lang === "es"
+
+  // Los enlaces internos deben quedarse dentro del idioma actual.
+  const localized = (href: string) => (isEs ? href : altPath(href, "en"))
 
   const copy = isEs ? {
     tagline: "El gestor de gastos que no se interpone en tu camino.",
@@ -72,7 +76,7 @@ export function SiteFooter({ lang }: SiteFooterProps) {
               </h4>
               <ul className="flex flex-col gap-3 text-sm font-semibold text-zinc-900/60">
                 <li>
-                  <Link href="/blog" className="hover:text-zinc-900 transition-colors">
+                  <Link href={localized("/blog")} className="hover:text-zinc-900 transition-colors">
                     {copy.blog}
                   </Link>
                 </li>
@@ -106,12 +110,12 @@ export function SiteFooter({ lang }: SiteFooterProps) {
               </h4>
               <ul className="flex flex-col gap-3 text-sm font-semibold text-zinc-900/60">
                 <li>
-                  <Link href="/privacy-policy" className="hover:text-zinc-900 transition-colors">
+                  <Link href={localized("/privacy-policy")} className="hover:text-zinc-900 transition-colors">
                     {copy.privacy}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/terms" className="hover:text-zinc-900 transition-colors">
+                  <Link href={localized("/terms")} className="hover:text-zinc-900 transition-colors">
                     {copy.terms}
                   </Link>
                 </li>

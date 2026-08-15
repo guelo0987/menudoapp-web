@@ -8,19 +8,21 @@ import { sendSupportMessage } from "@/app/actions/resend"
 import { CheckCircle2, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
-export default function SupportPageClient() {
-  const [lang, setLang] = useState<Language>("es")
+export default function SupportPageClient({ lang: langProp }: { lang?: Language } = {}) {
+  const [lang, setLang] = useState<Language>(langProp ?? "es")
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle")
 
   useEffect(() => {
+    // Si la URL define el idioma, manda ella y no la preferencia guardada.
+    if (langProp) return
     const saved = localStorage.getItem("menudo-lang") as Language
     if (saved === "es" || saved === "en") {
       setLang(saved)
     }
-  }, [])
+  }, [langProp])
 
   const handleSetLang = (l: Language) => {
     setLang(l)

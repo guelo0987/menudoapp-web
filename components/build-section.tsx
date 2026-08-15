@@ -14,12 +14,12 @@ function AvocadoAnimation() {
     <div className="relative mx-auto flex h-[380px] w-full max-w-lg items-center justify-center overflow-visible select-none my-4 z-10">
       {/* Looping video simulating a GIF of a walking avocado */}
       <video
-        src="/videos/animation4.mov"
+        src="/videos/animation4.mp4"
         autoPlay
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
         className="w-96 h-96 object-contain select-none pointer-events-none relative z-10"
       />
     </div>
@@ -273,7 +273,7 @@ function SharedNotificationsCard({ lang }: { lang: Language }) {
           )}>
             {/* Real Menudo Logo Image */}
             <img 
-              src="/brand/menudo-logo.png" 
+              src="/brand/menudo-logo.webp" 
               alt="Menudo Logo" 
               className="w-8 h-8 rounded-[8px] shrink-0 object-contain select-none pointer-events-none border border-white/5" 
             />

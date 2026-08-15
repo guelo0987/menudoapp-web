@@ -1,0 +1,86 @@
+# Menudo
+
+> App de finanzas personales y presupuestos compartidos para iOS, hecha en
+> República Dominicana. Registras tus gastos hablando o escribiendo en lenguaje
+> natural, funciona sin conexión a internet y sincroniza sola cuando vuelve la
+> señal. Disponible en español e inglés.
+
+Sitio: https://menudoapp.com
+Descarga: https://apps.apple.com/do/app/menudo-budget-expense/id6773500340
+Soporte: soporte@menudoapp.com
+Desarrollador: Miguel Cruz (República Dominicana)
+Plataforma: iOS 14 o superior. Android próximamente.
+Precio: descarga gratis con prueba incluida. Suscripción mensual, anual o de por vida.
+
+## Qué resuelve
+
+La mayoría de la gente abandona el control de gastos por la fricción de anotarlos:
+abrir una app, elegir categoría, escribir el monto, repetir diez veces al día.
+Menudo elimina ese paso. Le hablas —"gasté 500 en el súper"— y la app extrae el
+monto, deduce la categoría y lo guarda en segundos.
+
+## Funciones principales
+
+- **Registro por voz y lenguaje natural**: dictas o escribes la frase completa y la
+  IA extrae monto, tipo (ingreso o gasto) y categoría.
+- **Categorías creadas por IA**: si ninguna categoría existente encaja, la app
+  propone una nueva con su emoji.
+- **Offline-first**: la base de datos vive en el dispositivo (SQLite). Registras sin
+  señal y la app sincroniza al reconectar, con claves de idempotencia que evitan
+  gastos duplicados si la red falla a media petición.
+- **Listas y presupuestos compartidos**: hasta 4 miembros por lista, con roles de
+  propietario, editor y observador. Invitación por enlace.
+- **Notificaciones en tiempo real**: cuando alguien registra un gasto en una lista
+  compartida, al resto le llega un aviso.
+- **Alertas de presupuesto**: límite por categoría con aviso al cruzar el umbral
+  (80% por defecto, configurable).
+- **Gastos recurrentes**: diarios, semanales, **quincenales**, mensuales y anuales.
+  La frecuencia quincenal es poco común en apps internacionales y responde al ciclo
+  de pago habitual en República Dominicana.
+- **Múltiples carteras**: efectivo, banco, ahorro. Cada una puede contar o no para
+  el cálculo del patrimonio.
+- **Varias monedas**: DOP, USD y EUR, guardando la tasa de cambio de cada
+  transacción — útil para remesas.
+- **Integraciones de iOS**: atajos de Siri, Back Tap y Live Activities en la Isla
+  Dinámica, que permiten registrar y confirmar un gasto sin abrir la app.
+- **Bilingüe**: español e inglés.
+
+## Preguntas frecuentes
+
+**¿Qué es Menudo?**
+Una aplicación financiera personal y compartida para registrar gastos de manera
+rápida mediante lenguaje natural y atajos automáticos.
+
+**¿Funciona sin conexión a internet?**
+Sí. Los gastos se guardan localmente en el dispositivo y se sincronizan
+automáticamente en segundo plano al recuperar la señal.
+
+**¿Cómo se evitan los gastos duplicados si la red falla?**
+Cada transacción lleva una clave de idempotencia única. Si la app reintenta el
+envío por mala señal, el backend descarta los duplicados.
+
+**¿Están seguros los datos financieros?**
+Los datos viajan cifrados. En las listas compartidas solo tienen acceso el
+propietario y las personas invitadas explícitamente.
+
+**¿En qué se diferencia de otras apps de presupuesto?**
+Tres cosas: se usa hablando en vez de rellenando formularios, funciona completo sin
+internet, y contempla realidades locales como la quincena y el manejo de varias
+monedas con tasa de cambio.
+
+## Artículos
+
+- [Automatización con Apple Wallet y Atajos](https://menudoapp.com/blog/automatizacion-apple-shortcuts-wallet): cómo usar atajos de iOS para registrar un gasto en el momento de pagar.
+- [Privacidad primero: el diseño offline-first](https://menudoapp.com/blog/privacidad-finanzas-offline-first): por qué guardar las finanzas en el dispositivo con SQLite en vez de en la nube.
+- [Presupuestos en pareja](https://menudoapp.com/blog/presupuestos-compartidos-pareja-familia): compartir gastos del hogar sin perder independencia financiera.
+- [El poder del lenguaje natural](https://menudoapp.com/blog/lenguaje-natural-registro-finanzas): registrar gastos escribiendo una frase simple.
+- [Control de suscripciones y gastos recurrentes](https://menudoapp.com/blog/control-suscripciones-gastos-recurrentes): detectar lo que se paga y no se usa.
+- [Adiós a las hojas de cálculo](https://menudoapp.com/blog/adios-hojas-de-calculo-registro-minimalista): por qué las plantillas de Excel se abandonan.
+
+## Páginas
+
+- [Inicio](https://menudoapp.com/)
+- [Blog](https://menudoapp.com/blog)
+- [Soporte](https://menudoapp.com/support)
+- [Política de privacidad](https://menudoapp.com/privacy-policy)
+- [Términos](https://menudoapp.com/terms)

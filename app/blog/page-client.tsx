@@ -5,18 +5,21 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Language } from "@/lib/site-content"
 import { blogPosts } from "@/lib/blog-data"
+import { altPath } from "@/lib/i18n"
 import Link from "next/link"
 import { BookOpen, Calendar, ArrowRight } from "lucide-react"
 
-export default function BlogListPageClient() {
-  const [lang, setLang] = useState<Language>("es")
+export default function BlogListPageClient({ lang: langProp }: { lang?: Language } = {}) {
+  const [lang, setLang] = useState<Language>(langProp ?? "es")
 
   useEffect(() => {
+    // Si la URL define el idioma, manda ella y no la preferencia guardada.
+    if (langProp) return
     const saved = localStorage.getItem("menudo-lang") as Language
     if (saved === "es" || saved === "en") {
       setLang(saved)
     }
-  }, [])
+  }, [langProp])
 
   const handleSetLang = (l: Language) => {
     setLang(l)
@@ -24,6 +27,9 @@ export default function BlogListPageClient() {
   }
 
   const posts = blogPosts[lang]
+
+  // Los enlaces se quedan dentro del idioma actual.
+  const localized = (href: string) => (lang === "en" ? altPath(href, "en") : href)
 
   const copy = lang === "es" ? {
     eyebrow: "Menudo Blog",
@@ -90,7 +96,7 @@ export default function BlogListPageClient() {
                   </div>
 
                   <h2 className="font-heading text-2xl font-bold text-zinc-900 group-hover:text-brand transition-colors">
-                    <Link href={`/blog/${post.slug}`} className="focus:outline-none">
+                    <Link href={localized(`/blog/${post.slug}`)} className="focus:outline-none">
                       {post.title}
                     </Link>
                   </h2>
@@ -101,7 +107,7 @@ export default function BlogListPageClient() {
 
                   <div className="pt-2">
                     <Link 
-                      href={`/blog/${post.slug}`} 
+                      href={localized(`/blog/${post.slug}`)} 
                       className="inline-flex items-center gap-1.5 text-sm font-bold text-brand hover:opacity-90 transition-opacity"
                     >
                       {copy.readMore} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
