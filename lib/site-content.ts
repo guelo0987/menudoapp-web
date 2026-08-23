@@ -140,19 +140,23 @@ export const siteContent = {
           body: 'Para prestar los servicios de registro de gastos personales y compartidos, procesamos:\n• Datos de la Cuenta: Correo electrónico, ID único de usuario, nombre de perfil y foto de perfil opcional provista en el registro.\n• Datos Financieros: Transacciones registradas por el usuario (monto, concepto/descripción, categoría, fecha, moneda e identificadores de idempotencia).\n• Datos de Colaboración: Correos electrónicos de los usuarios a quienes invites a tus listas de gastos.'
         },
         {
-          title: '3. Procesamiento con Inteligencia Artificial',
+          title: '3. Conexión con Gmail (función Banking)',
+          body: 'Banking es opcional: solo se activa si usted la conecta, y puede desconectarla en cualquier momento desde Ajustes › Conectar banco.\n• Permiso que pedimos: uno solo, «gmail.readonly», que es de SOLO LECTURA. Menudo no puede escribir, responder, reenviar ni borrar nada de su correo, ni modificar su cuenta de Google.\n• Qué leemos: únicamente los correos enviados por las direcciones de los bancos que usted conecta. La consulta que hacemos a Gmail se limita a esos remitentes, por lo que el resto de su bandeja no se lee ni se descarga en ningún momento.\n• Qué guardamos: de cada correo del banco extraemos el importe, la moneda, el comercio o persona, la fecha, los cuatro últimos dígitos de la tarjeta cuando el banco los incluye y el tipo de movimiento. También conservamos el texto del correo durante 30 días para poder resolver una incidencia reciente; pasado ese plazo se elimina automáticamente. Nunca guardamos su contraseña de Gmail ni la de su banco: no las tenemos ni las solicitamos.\n• Para qué lo usamos: solo para proponerle movimientos en la bandeja de revisión de la aplicación. Nada se registra en sus cuentas hasta que usted lo acepta.\n• Qué no hacemos: no vendemos ni cedemos estos datos, no los usamos para publicidad ni para elaborar perfiles, y no los usamos para evaluar solvencia ni para conceder préstamos. Ninguna persona de Menudo lee sus correos: el proceso es automático. Solo accederíamos a un correo concreto si usted lo solicitara para resolver una incidencia suya, si fuera imprescindible para investigar un abuso de seguridad, o si la ley nos obligara.\n• Uso Limitado: el uso y la transferencia por parte de Menudo de la información recibida de las APIs de Google se ajustará a la Política de Datos de Usuario de los Servicios API de Google (https://developers.google.com/terms/api-services-user-data-policy), incluidos los requisitos de Uso Limitado.\n• Cómo retirarlo: desde Ajustes › Conectar banco › Desconectar. Al hacerlo revocamos el permiso en Google y eliminamos el token; los movimientos que usted ya hubiera aceptado siguen siendo suyos, como cualquier gasto escrito a mano. También puede retirarlo directamente en https://myaccount.google.com/permissions. Si elimina su cuenta de Menudo, revocamos el permiso en Google y se elimina todo lo relacionado con Banking.\n• Dónde se guarda: en nuestra base de datos en Supabase (Estados Unidos), cifrado en tránsito y en reposo. El token de acceso a Gmail se guarda además cifrado por separado con AES-256-GCM.'
+        },
+        {
+          title: '4. Procesamiento con Inteligencia Artificial',
           body: 'Al registrar un gasto por voz, texto o Atajo de Siri, la descripción del gasto y su catálogo de categorías se envían para su clasificación utilizando los procesadores LPU de Groq y el modelo Llama 3 para una extracción inmediata a JSON. No transmitimos datos personales identificativos (como nombre o correo) a los servicios de Groq.'
         },
         {
-          title: '4. Proveedores y Almacenamiento',
+          title: '5. Proveedores y Almacenamiento',
           body: 'Sus datos se guardan y procesan utilizando proveedores tecnológicos líderes de la industria:\n• Supabase: Infraestructura de base de datos cifrada, autenticación de usuarios y almacenamiento en la nube.\n• RevenueCat y Apple App Store: Gestión segura del estado de suscripción y facturación premium. Nosotros no almacenamos detalles de sus tarjetas de crédito o débito.\n• Apple APNs: Envío de notificaciones push en tiempo real sobre la actividad en listas compartidas.\n• Sentry: Monitoreo de estabilidad de la aplicación y reporte de fallos y errores del servidor.\n• PostHog: Análisis de uso y eventos del producto en la aplicación móvil y la web.'
         },
         {
-          title: '5. Retención de Datos y Seguridad',
+          title: '6. Retención de Datos y Seguridad',
           body: '• Idempotencia Extrema: Cada transacción incluye un "idempotency_key" único generado por la app. Si la red falla y se envía el gasto varias veces, el backend previene cobros duplicados en su presupuesto.\n• Retención: Conservamos sus datos únicamente mientras su cuenta esté activa. Si decide eliminar su cuenta desde los ajustes de la aplicación, toda su información personal y de transacciones asociadas será eliminada de forma permanente e inmediata de nuestras bases de datos activas.'
         },
         {
-          title: '6. Sus Derechos y Ley Aplicable',
+          title: '7. Sus Derechos y Ley Aplicable',
           body: 'Usted tiene el derecho de acceder, rectificar, exportar o solicitar la eliminación total de sus datos en cualquier momento. Al ser operado por Miguel Cruz, este acuerdo se rige por las leyes de la República Dominicana, ofreciendo además mecanismos de control global para cumplir con el estándar GDPR de protección de datos.'
         }
       ]
@@ -323,19 +327,23 @@ export const siteContent = {
           body: 'To provide our personal and shared expense tracking features, we process:\n• Account Data: Email, unique user ID, profile name, and optional profile picture provided during registration.\n• Financial Data: Transaction details you log manually or automatically (amount, concept/description, category, date, currency, and uniqueness/idempotency keys).\n• Collaboration Data: Emails of users you invite to your shared expense lists.'
         },
         {
-          title: '3. AI Processing and Categorization',
+          title: '3. Gmail Connection (Banking feature)',
+          body: 'Banking is optional: it only turns on if you connect it, and you can disconnect it at any time from Settings › Connect bank.\n• Permission we request: one only, "gmail.readonly", which is READ-ONLY. Menudo cannot write, reply, forward or delete anything in your email, and cannot modify your Google account.\n• What we read: only the emails sent by the bank addresses you connect. The query we send to Gmail is limited to those senders, so the rest of your inbox is never read or downloaded.\n• What we store: from each bank email we extract the amount, the currency, the merchant or person, the date, the last four digits of the card when the bank includes them, and the type of movement. We also keep the email text for 30 days so we can investigate a recent problem; after that it is deleted automatically. We never store your Gmail or bank password: we do not have them and we do not ask for them.\n• What we use it for: only to suggest movements in the app\'s review tray. Nothing is recorded in your accounts until you accept it.\n• What we never do: we do not sell or share this data, we do not use it for advertising or profiling, and we do not use it to assess creditworthiness or for lending. No person at Menudo reads your email: the process is automated. We would only access a specific email if you asked us to in order to resolve your own support case, if it were strictly necessary to investigate a security abuse, or if required by law.\n• Limited Use: Menudo\'s use and transfer of information received from Google APIs to any other app will adhere to the Google API Services User Data Policy (https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.\n• How to remove it: Settings › Connect bank › Disconnect. When you do, we revoke the permission with Google and delete the token; movements you already accepted remain yours, like any expense you typed in by hand. You can also revoke it directly at https://myaccount.google.com/permissions. If you delete your Menudo account, we revoke the Google permission and everything related to Banking is deleted.\n• Where it is stored: in our database at Supabase (United States), encrypted in transit and at rest. The Gmail access token is additionally encrypted separately with AES-256-GCM.'
+        },
+        {
+          title: '4. AI Processing and Categorization',
           body: 'When you log a transaction via voice, text, or Siri Shortcut, the expense description and your custom category list are processed using Groq\'s LPU hardware and the Llama 3 model to automatically categorize the entry. We do not transmit personally identifiable information (such as your name or email) to Groq\'s AI services.'
         },
         {
-          title: '4. Providers and Storage',
+          title: '5. Providers and Storage',
           body: 'Your data is stored and processed securely using industry-leading technology providers:\n• Supabase: For secure, encrypted database hosting, user authentication, and cloud storage.\n• RevenueCat & Apple App Store: For secure management of premium subscription status and billing. We never store or handle your credit/debit card details.\n• Apple APNs: For sending clean, real-time push notifications regarding collaborative list activities.\n• Sentry: For application stability monitoring and capturing system and server errors.\n• PostHog: For product analytics and tracking user interactions inside the mobile app and website.'
         },
         {
-          title: '5. Data Retention and Security',
+          title: '6. Data Retention and Security',
           body: '• Extreme Idempotency: Every transaction contains a unique "idempotency_key" generated by the mobile client. If your connection drops and transmits multiple times, our backend prevents duplicate logs.\n• Retention: We keep your data only as long as your account remains active. If you choose to delete your account in the app settings, all your personal info and transaction history will be permanently and immediately deleted from our active databases.'
         },
         {
-          title: '6. Your Rights and Governing Law',
+          title: '7. Your Rights and Governing Law',
           body: 'You retain the right to access, correct, export, or permanently delete your data at any time. Operated by Miguel Cruz, this agreement is governed by the laws of the Dominican Republic, while incorporating global compliance standards (including GDPR rights) for all users.'
         }
       ]
