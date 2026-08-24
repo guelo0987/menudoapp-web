@@ -184,5 +184,15 @@
       "Bug fixes and stability improvements.",
       "General performance improvements."
     ]
+  },
+  "1.0.9+58": {
+    "es": [
+      "Corrección de errores y mejoras de estabilidad.",
+      "Mejoras de rendimiento general."
+    ],
+    "en": [
+      "Bug fixes and stability improvements.",
+      "General performance improvements."
+    ]
   }
 }
