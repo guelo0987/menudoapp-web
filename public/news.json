@@ -184,13 +184,5 @@
       "Bug fixes and stability improvements.",
       "General performance improvements."
     ]
-  },
-  "1.0.9+57": {
-    "es": [
-      "Mejoras de rendimiento."
-    ],
-    "en": [
-      "Performance updates."
-    ]
   }
 }
