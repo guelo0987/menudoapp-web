@@ -42,6 +42,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...withAlternates('/support', now, 0.7, 'monthly'),
     ...withAlternates('/privacy-policy', now, 0.3, 'yearly'),
     ...withAlternates('/terms', now, 0.3, 'yearly'),
+    // Solo existe en español, así que no pasa por withAlternates: /en/banco no
+    // existe y declararlo mandaría al buscador a un 404.
+    { url: `${SITE_URL}/banco`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
   ]
 
   const seen = new Set<string>()
