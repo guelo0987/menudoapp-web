@@ -195,16 +195,6 @@
       "General performance improvements."
     ]
   },
-  "1.0.22+75": {
-    "es": [
-      "Corrección de errores y mejoras de estabilidad.",
-      "Mejoras de rendimiento general."
-    ],
-    "en": [
-      "Bug fixes and stability improvements.",
-      "General performance improvements."
-    ]
-  },
   "1.0.21+74": {
     "es": [
       "Nuevo: mantén pulsado un gasto para decir en qué moneda lo pagaste (dólares, euros o pesos colombianos). Se convierte con la tasa de ese día y suma en la moneda de tu lista.",
