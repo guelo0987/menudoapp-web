@@ -204,5 +204,15 @@
       "Bug fixes and stability improvements.",
       "General performance improvements."
     ]
-  
+  },
+  "1.0.21+74": {
+    "es": [
+      "Nuevo: mantén pulsado un gasto para decir en qué moneda lo pagaste (dólares, euros o pesos colombianos). Se convierte con la tasa de ese día y suma en la moneda de tu lista.",
+      "Mejoras de rendimiento y estabilidad."
+    ],
+    "en": [
+      "New: press and hold an expense to set the currency you paid in (dollars, euros or Colombian pesos). It's converted at that day's rate and adds up in your list's currency.",
+      "Performance and stability improvements."
+    ]
+  }
 }
