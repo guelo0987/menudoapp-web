@@ -194,5 +194,15 @@
       "Bug fixes and stability improvements.",
       "General performance improvements."
     ]
-  }
+  },
+  "1.0.22+74": {
+    "es": [
+      "Corrección de errores y mejoras de estabilidad.",
+      "Mejoras de rendimiento general."
+    ],
+    "en": [
+      "Bug fixes and stability improvements.",
+      "General performance improvements."
+    ]
+  
 }
