@@ -10,7 +10,7 @@ export const EN_PREFIX = '/en'
  * Se dejó el español en la raíz a propósito: es el mercado principal y mover
  * esas URLs habría tirado a la basura el posicionamiento que ya tienen.
  */
-const LOCALIZED_PATHS = ['/', '/blog', '/support', '/privacy-policy', '/terms']
+const LOCALIZED_PATHS = ['/', '/blog', '/support', '/privacy-policy', '/terms', '/delete-account']
 
 /** ¿Esta ruta tiene gemela en el otro idioma? */
 export function isLocalizedPath(pathname: string): boolean {
