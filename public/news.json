@@ -204,5 +204,19 @@
       "New: press and hold an expense to set the currency you paid in (dollars, euros or Colombian pesos). It's converted at that day's rate and adds up in your list's currency.",
       "Performance and stability improvements."
     ]
-  }
+  },
+  "1.0.22+77": {
+  "es": [
+    "Nuevo: tus gastos en pastel. Toca el botón redondo junto a tus filtros para cambiar de barras a pastel.",
+    "Nuevo: fechas de tu tarjeta. Pon el día de corte y Menudo te avisa 2 días antes del corte y del pago.",
+    "Ahora puedes tener varias recurrencias en la misma categoría, cada una con su aviso.",
+    "Mejoras de rendimiento y estabilidad."
+  ],
+  "en": [
+    "New: your spending as a pie chart. Tap the round button next to your filters to switch from bars to a pie chart.",
+    "New: card dates. Set your statement day and Menudo reminds you 2 days before the statement and the payment.",
+    "You can now have several recurring expenses in the same category, each with its own reminder.",
+    "Performance and stability improvements."
+  ]
+}
 }
