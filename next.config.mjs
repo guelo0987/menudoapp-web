@@ -47,6 +47,13 @@ const nextConfig = {
     return [
       { source: '/privacy', destination: '/privacy-policy', permanent: true },
       { source: '/en/privacy', destination: '/en/privacy-policy', permanent: true },
+      // Ajustes › Atajo de facturas (app 1.0.25). Temporal: si se rehace el
+      // atajo, se cambia aqui sin sacar otra version de la app.
+      {
+        source: '/atajo-facturas',
+        destination: 'https://www.icloud.com/shortcuts/121555533f3e4f69a6be7242c803fdb1',
+        permanent: false,
+      },
     ]
   },
 }
