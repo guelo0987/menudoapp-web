@@ -145,7 +145,7 @@ export const siteContent = {
         },
         {
           title: '4. Procesamiento con Inteligencia Artificial',
-          body: 'Al registrar un gasto por voz, texto o Atajo de Siri, la descripción del gasto y su catálogo de categorías se envían para su clasificación utilizando los procesadores LPU de Groq y el modelo Llama 3 para una extracción inmediata a JSON. No transmitimos datos personales identificativos (como nombre o correo) a los servicios de Groq.'
+          body: 'Usamos servicios de inteligencia artificial de terceros solo para convertir lo que usted nos da en gastos. No les enviamos los datos de su cuenta (como su nombre o su correo).\n• Voz, texto y Atajo de Siri: el audio se transcribe con Groq (Whisper), y la descripción del gasto, junto con su lista de categorías, se clasifica a través de OpenRouter o Groq.\n• Fotos de facturas: cuando usted elige escanear una factura, la foto se envía a OpenRouter, que la pasa al modelo Gemini de Google para leer el comercio, la fecha, los artículos y el total. Si la factura lleva datos suyos impresos (por ejemplo, su RNC), van en la imagen. Menudo no guarda la foto: solo se guardan los gastos que usted revisa y confirma.\n• Banking: para sugerir la categoría de un movimiento enviamos a OpenRouter el nombre del comercio, el importe y la moneda. El texto del correo no se envía.'
         },
         {
           title: '5. Proveedores y Almacenamiento',
@@ -332,7 +332,7 @@ export const siteContent = {
         },
         {
           title: '4. AI Processing and Categorization',
-          body: 'When you log a transaction via voice, text, or Siri Shortcut, the expense description and your custom category list are processed using Groq\'s LPU hardware and the Llama 3 model to automatically categorize the entry. We do not transmit personally identifiable information (such as your name or email) to Groq\'s AI services.'
+          body: 'We use third-party AI services only to turn what you give us into expenses. We never send them your account details (such as your name or email).\n• Voice, text and Siri Shortcut: audio is transcribed with Groq (Whisper), and the expense description, together with your category list, is classified through OpenRouter or Groq.\n• Receipt photos: when you choose to scan a receipt, the photo is sent to OpenRouter, which passes it to Google\'s Gemini model to read the merchant, date, items and total. If the receipt has your own details printed on it (for example, your tax ID), they are part of the image. Menudo does not keep the photo; only the expenses you review and confirm are saved.\n• Banking: to suggest a category for a movement we send OpenRouter the merchant name, amount and currency. The email text is not sent.'
         },
         {
           title: '5. Providers and Storage',
