@@ -218,5 +218,17 @@
     "You can now have several recurring expenses in the same category, each with its own reminder.",
     "Performance and stability improvements."
   ]
-}
+},
+  "1.0.25+80": {
+    "es": [
+      "Nuevo: escanea tus facturas. Toca el +, luego la cámara, y Menudo te propone los gastos por categoría.",
+      "Nuevo en iPhone: el atajo para escanear facturas desde tu pantalla de inicio (Ajustes › Atajo de facturas).",
+      "Mejoras de rendimiento y estabilidad."
+    ],
+    "en": [
+      "New: scan your receipts. Tap +, then the camera, and Menudo suggests the expenses by category.",
+      "New on iPhone: the shortcut to scan receipts from your Home Screen (Settings › Receipt shortcut).",
+      "Performance and stability improvements."
+    ]
+  }
 }
