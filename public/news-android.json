@@ -1,0 +1,12 @@
+{
+  "1.0.25+80": {
+    "es": [
+      "Nuevo: escanea tus facturas. Toca el +, luego la cámara, y Menudo te propone los gastos por categoría.",
+      "Mejoras de rendimiento y estabilidad."
+    ],
+    "en": [
+      "New: scan your receipts. Tap +, then the camera, and Menudo suggests the expenses by category.",
+      "Performance and stability improvements."
+    ]
+  }
+}
