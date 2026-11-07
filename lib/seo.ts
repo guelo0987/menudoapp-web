@@ -5,6 +5,7 @@ export const SITE_URL = 'https://menudoapp.com'
 export const SITE_NAME = 'Menudo'
 export const APP_STORE_ID = '6773500340'
 export const APP_STORE_URL = `https://apps.apple.com/do/app/menudo-budget-expense/id${APP_STORE_ID}`
+export const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.miguelcruz.menudoapp'
 export const SUPPORT_EMAIL = 'soporte@menudoapp.com'
 
 /**
@@ -58,7 +59,7 @@ export const softwareApplicationSchema = {
   alternateName: 'Menudo — Budget & Expense',
   applicationCategory: 'FinanceApplication',
   applicationSubCategory: 'Personal Budgeting',
-  operatingSystem: 'iOS 14.0 or later',
+  operatingSystem: 'iOS 14.0 or later, Android 7.0 or later',
   url: SITE_URL,
   installUrl: APP_STORE_URL,
   downloadUrl: APP_STORE_URL,

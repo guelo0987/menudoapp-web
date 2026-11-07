@@ -60,6 +60,7 @@ export default function InvitationJoinPageClient() {
   }
 
   const appStoreUrl = "https://apps.apple.com/do/app/menudo-budget-expense/id6773500340?l=en-GB"
+  const playStoreUrl = "https://play.google.com/store/apps/details?id=com.miguelcruz.menudoapp"
 
   const copy =
     lang === "es"
@@ -141,14 +142,14 @@ export default function InvitationJoinPageClient() {
                   {copy.appStore}
                 </a>
 
-                {/* Inactive Google Play Store Download Button */}
-                <div className="relative inline-flex items-center gap-2 rounded-xl border border-zinc-200/80 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 opacity-45 grayscale select-none cursor-not-allowed">
+                {/* Google Play Download Button */}
+                <a
+                  href={playStoreUrl}
+                  className="inline-flex items-center gap-2 rounded-xl border border-zinc-200/80 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-xs hover:bg-zinc-100 hover:scale-[1.02] active:scale-98 transition-all cursor-pointer"
+                >
                   <PlayStoreIcon />
                   {copy.playStore}
-                  <span className="absolute -top-2 -right-2.5 bg-emerald-500 text-white font-heading text-[8px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider shadow-md border border-emerald-400 select-none animate-pulse">
-                    {lang === "es" ? "Próximamente" : "Soon"}
-                  </span>
-                </div>
+                </a>
               </div>
             </div>
 

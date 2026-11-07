@@ -221,7 +221,7 @@ export default function SupportPageClient({ lang: langProp }: { lang?: Language 
                   <span className="text-xs font-semibold text-foreground/50">{copy.qrLabel}</span>
                   <div className="flex gap-2">
                     <a href="https://apps.apple.com/do/app/menudo-budget-expense/id6773500340?l=en-GB" className="rounded-lg bg-zinc-950 px-4 py-2 text-xs font-semibold text-white transition-opacity hover:opacity-95">App Store</a>
-                    <a href="#" className="rounded-lg bg-zinc-950 px-4 py-2 text-xs font-semibold text-white transition-opacity hover:opacity-95">Play Store</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.miguelcruz.menudoapp" className="rounded-lg bg-zinc-950 px-4 py-2 text-xs font-semibold text-white transition-opacity hover:opacity-95">Play Store</a>
                   </div>
                 </div>
               </div>

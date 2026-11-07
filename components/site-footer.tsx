@@ -135,12 +135,13 @@ export function SiteFooter({ lang }: SiteFooterProps) {
                 >
                   <AppleIcon />
                 </a>
-                <div
-                  className="h-11 w-11 flex items-center justify-center bg-white border border-zinc-200/80 rounded-xl shadow-xs opacity-50 grayscale cursor-not-allowed select-none"
-                  aria-label="Download on Play Store (Coming Soon)"
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.miguelcruz.menudoapp"
+                  className="h-11 w-11 flex items-center justify-center bg-white border border-zinc-200/80 rounded-xl shadow-xs hover:bg-zinc-100 hover:scale-[1.03] active:scale-95 transition-all duration-200"
+                  aria-label="Get it on Google Play"
                 >
                   <PlayStoreIcon />
-                </div>
+                </a>
 
               </div>
             </div>

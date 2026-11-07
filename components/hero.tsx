@@ -86,17 +86,16 @@ export function Hero({ lang }: HeroProps) {
               className="h-[44px] w-auto select-none"
             />
           </a>
-          <div className="relative cursor-not-allowed select-none transition-transform hover:scale-[1.01] duration-200">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.miguelcruz.menudoapp"
+            className="transition-transform active:scale-95 hover:scale-[1.03] duration-200"
+          >
             <img
               src="/google-badge.svg"
-              alt="Get it on Play Store (Coming Soon)"
-              className="h-[44px] w-auto opacity-45 select-none grayscale"
+              alt="Get it on Google Play"
+              className="h-[44px] w-auto select-none"
             />
-
-            <span className="absolute -top-2.5 -right-2 bg-emerald-500 text-white font-heading text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-md border border-emerald-400 select-none animate-pulse">
-              {lang === "es" ? "Próximamente" : "Coming Soon"}
-            </span>
-          </div>
+          </a>
         </div>
       </div>
 
