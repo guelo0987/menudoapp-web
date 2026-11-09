@@ -230,5 +230,15 @@
       "New on iPhone: the shortcut to scan receipts from your Home Screen (Settings › Receipt shortcut).",
       "Performance and stability improvements."
     ]
+  },
+  "1.0.26+81": {
+    "es": [
+      "Arreglado: Menudo ya no te saca de tu cuenta al abrirla después de tener el iPhone bloqueado.",
+      "Mejoras de rendimiento y estabilidad."
+    ],
+    "en": [
+      "Fixed: Menudo no longer signs you out when you open it after your iPhone was locked.",
+      "Performance and stability improvements."
+    ]
   }
 }
