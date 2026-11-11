@@ -8,5 +8,15 @@
       "New: scan your receipts. Tap +, then the camera, and Menudo suggests the expenses by category.",
       "Performance and stability improvements."
     ]
+  },
+  "1.0.26+81": {
+    "es": [
+      "La pantalla de la suscripción ahora tiene una X para salir.",
+      "Mejoras de rendimiento y estabilidad."
+    ],
+    "en": [
+      "The subscription screen now has an X to exit.",
+      "Performance and stability improvements."
+    ]
   }
 }
