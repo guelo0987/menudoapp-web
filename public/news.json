@@ -240,5 +240,19 @@
       "Fixed: Menudo no longer signs you out when you open it after your iPhone was locked.",
       "Performance and stability improvements."
     ]
+  },
+  "1.0.27+82": {
+    "es": [
+      "Exportar ahora te da un Excel de verdad: cada dato en su columna y con filtros.",
+      "En Ajustes ves el estado real de tu suscripción y el correo con el que entraste.",
+      "Al editar un gasto ya no se pierde la categoría.",
+      "Mejoras de rendimiento y estabilidad."
+    ],
+    "en": [
+      "Export now gives you a real Excel file: every field in its own column, with filters.",
+      "Settings now shows your real subscription status and the email you signed in with.",
+      "Editing an expense no longer loses its category.",
+      "Performance and stability improvements."
+    ]
   }
 }
