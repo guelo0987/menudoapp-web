@@ -254,5 +254,16 @@
       "Editing an expense no longer loses its category.",
       "Performance and stability improvements."
     ]
+  },
+  "1.0.28+83": {
+    "es": [
+      "Dicta en dólares: «gasté 50 dólares en Amazon» se guarda en tu moneda, con el monto original al lado.",
+      "Arreglado: un gasto en una cartera recién creada ya no se queda sin subir.",
+      "Mejoras de rendimiento y estabilidad."
+    ],
+    "en": [
+      "Fixed: an expense in a brand-new wallet no longer gets stuck.",
+      "Performance and stability improvements."
+    ]
   }
 }
